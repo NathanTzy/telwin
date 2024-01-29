@@ -1282,6 +1282,18 @@ input:checked + .toggle-bg {
   margin-top: 7rem;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mt-36 {
+  margin-top: 9rem;
+}
+
+.mt-9 {
+  margin-top: 2.25rem;
+}
+
 .block {
   display: block;
 }
@@ -1602,6 +1614,18 @@ input:checked + .toggle-bg {
   gap: 2.5rem;
 }
 
+.gap-24 {
+  gap: 6rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-7 {
+  gap: 1.75rem;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -1664,6 +1688,10 @@ input:checked + .toggle-bg {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
 }
 
 .rounded-e-lg {
@@ -1814,6 +1842,81 @@ input:checked + .toggle-bg {
   background-color: rgb(255 255 255 / 0.3);
 }
 
+.bg-green-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(132 225 188 / var(--tw-bg-opacity));
+}
+
+.bg-green-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(49 196 141 / var(--tw-bg-opacity));
+}
+
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 128 128 / var(--tw-bg-opacity));
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(224 36 36 / var(--tw-bg-opacity));
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 82 82 / var(--tw-bg-opacity));
+}
+
+.bg-zinc-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 212 216 / var(--tw-bg-opacity));
+}
+
+.bg-zinc-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(228 228 231 / var(--tw-bg-opacity));
+}
+
+.bg-stone-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(168 162 158 / var(--tw-bg-opacity));
+}
+
+.bg-stone-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 211 209 / var(--tw-bg-opacity));
+}
+
+.bg-sky-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(125 211 252 / var(--tw-bg-opacity));
+}
+
+.bg-lime-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(163 230 53 / var(--tw-bg-opacity));
+}
+
+.bg-lime-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 249 157 / var(--tw-bg-opacity));
+}
+
+.bg-lime-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(190 242 100 / var(--tw-bg-opacity));
+}
+
+.bg-blue-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(164 202 254 / var(--tw-bg-opacity));
+}
+
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(28 100 242 / var(--tw-bg-opacity));
+}
+
 .bg-fixed {
   background-attachment: fixed;
 }
@@ -1947,6 +2050,11 @@ input:checked + .toggle-bg {
 .px-96 {
   padding-left: 24rem;
   padding-right: 24rem;
+}
+
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .pt-2 {
@@ -2529,6 +2637,10 @@ input:checked + .toggle-bg {
     padding-right: 1rem;
   }
 
+  .sm\:ps-40 {
+    padding-inline-start: 10rem;
+  }
+
   .sm\:text-center {
     text-align: center;
   }
@@ -2571,6 +2683,11 @@ input:checked + .toggle-bg {
 
   .md\:col-span-1 {
     grid-column: span 1 / span 1;
+  }
+
+  .md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .md\:ms-2 {
@@ -2661,6 +2778,10 @@ input:checked + .toggle-bg {
     flex-direction: row;
   }
 
+  .md\:justify-center {
+    justify-content: center;
+  }
+
   .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(2rem * var(--tw-space-x-reverse));
@@ -2696,6 +2817,34 @@ input:checked + .toggle-bg {
   .md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .md\:ps-20 {
+    padding-inline-start: 5rem;
+  }
+
+  .md\:ps-3 {
+    padding-inline-start: 0.75rem;
+  }
+
+  .md\:ps-32 {
+    padding-inline-start: 8rem;
+  }
+
+  .md\:ps-36 {
+    padding-inline-start: 9rem;
+  }
+
+  .md\:ps-48 {
+    padding-inline-start: 12rem;
+  }
+
+  .md\:ps-44 {
+    padding-inline-start: 11rem;
+  }
+
+  .md\:ps-40 {
+    padding-inline-start: 10rem;
   }
 
   .md\:text-center {
@@ -2740,6 +2889,14 @@ input:checked + .toggle-bg {
 
   .lg\:col-span-2 {
     grid-column: span 2 / span 2;
+  }
+
+  .lg\:col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+
+  .lg\:row-span-2 {
+    grid-row: span 2 / span 2;
   }
 
   .lg\:mt-10 {
@@ -2790,6 +2947,23 @@ input:checked + .toggle-bg {
   .lg\:py-56 {
     padding-top: 14rem;
     padding-bottom: 14rem;
+  }
+
+  .lg\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .lg\:ps-0 {
+    padding-inline-start: 0px;
+  }
+
+  .lg\:ps-5 {
+    padding-inline-start: 1.25rem;
+  }
+
+  .lg\:ps-4 {
+    padding-inline-start: 1rem;
   }
 
   .lg\:text-left {
