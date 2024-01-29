@@ -11,6 +11,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500&display=swap"
             rel="stylesheet">
+        <style>
+            * {
+                scroll-behavior: smooth;
+            }
+        </style>
     </head>
 
     <body>
@@ -35,7 +40,7 @@
                     <ul
                         class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
-                            <a href="#"
+                            <a href="#satu"
                                 class="block py-2 mt-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yel md:p-0 hover:text-yellow-400 ">Profile</a>
                         </li>
                         <li>
@@ -59,6 +64,7 @@
             </div>
         </nav>
         <!-- END NAVTZY -->
+
 
         <!-- SIDETZY -->
         <div id="drawer-navigation"
@@ -127,7 +133,7 @@
                             <span class="ms-3">Rent</span>
                         </a> </li>
                 </ul>
-                <ul class=" mt-64 ms-2 font-Poppins font-medium">
+                <ul class=" lg:mt-64 sm:mt-24 md:mt-24 sm:ms-2 md:ms-2 ms-2 font-Poppins font-medium">
                     <li>
                         <a href="#" class=" text-white flex">
                             <i class="fa-solid fa-right-to-bracket text-2xl"></i>
@@ -141,6 +147,7 @@
             </div>
         </div>
         <!-- SIDETZY -->
+
 
         <!-- JUMBOTRON -->
         <section class="bg-center bg-no-repeat bg-gray-700 bg-blend-multiply font-Poppins bg-fixed"
@@ -156,9 +163,9 @@
                 <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
                     <a href="#"
                         class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:ring-yellow-300 dark:focus:ring-blue-900">
-                        Find Ur Type
-                        <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <p class=" me-2">Find Ur Type</p>
+                        <svg class="w-3.5 h-3.5  rtl:rotate-180 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M1 5h12m0 0L9 1m4 4L9 9" />
                         </svg>
@@ -171,6 +178,7 @@
             </div>
         </section>
         <!-- END JUMBOTRON -->
+
 
         <!-- MODAL -->
         <!-- Main modal -->
@@ -237,18 +245,23 @@
         </div>
         <!-- END MODAL -->
 
+
         <!-- CONTENT -->
-        <div class="container mx-auto max-w-md mt-24 lg:flex lg:max-w-full lg:p-0">
+        <!-- PROFILE -->
+        <!-- content1 -->
+        <div class="container mx-auto max-w-md mt-24 lg:flex lg:max-w-full lg:p-0" id="satu">
             <div class="px-6 lg:mt-10">
                 <div
-                    class="py-4 max-w-lg mx-auto rounded-lg md:px-6 shadow-lg sm:shadow-lg md:shadow-lg lg:shadow-none ">
+                    class="py-4 max-w-lg mx-auto rounded-lg md:px-6 shadow-lg sm:shadow-xl sm:shadow-gray-700 sm:p-5 md:shadow-xl  md:shadow-gray-700 lg:shadow-none">
                     <h2
                         class="text-xl font-poppins mb-3 font-bold text-center sm:text-center md:text-center lg:text-left sm:text-2xl md:text-3xl lg:text-5xl">
                         Good People <span class="text-yellow-400">Require</span> Good Residence
                     </h2>
-                    <img src="img/pexels-expect-best-323780.jpg" alt="" class="rounded-lg lg:hidden sm:p-4 md:rounded-lg">
-                    <h2 class="font-medium font-poppins text-2xl my-2 underline"><span class="text-yellow-400 font-extrabold">MOVE</span> For the better future</h2>
-                    <p class="font-poppins text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    <img src="img/pexels-expect-best-323780.jpg" alt="" class="rounded-lg lg:hidden">
+                    <h2 class="font-medium font-poppins text-2xl my-3 underline"><span
+                            class="text-yellow-400 font-extrabold">MOVE</span> For the better <span
+                            class="text-yellow-400 font-extrabold">Life</span></h2>
+                    <p class="font-poppins">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                         Autem,
                         quis vel rerum inventore officiis
                         molestiae odio labore assumenda tempore vero. Lorem ipsum dolor sit amet consectetur adipisicing
@@ -262,6 +275,125 @@
                 <img src="img/pexels-expect-best-323780.jpg" width="960px" alt="" class="rounded-l-full">
             </div>
         </div>
+
+        <!-- content2 -->
+        <div class="grid grid-cols-3 gap-11 px-3 mt-32 font-Poppins">
+            <div class="py-8 rounded-lg shadow-2xl shadow-gray-700 sm:col-span-3 md:col-span-3 lg:col-span-1">
+                <p class="text-center"><i class="fa-solid fa-house text-3xl bg-yellow-300 rounded-full p-4"></i></p>
+                <h3 class="text-center">Property sold</h3>
+                <p class="text-center mt-5 font-medium">Over</p>
+                <h2 class="text-center text-4xl font-bold">1800 Units</h2>
+            </div>
+            <div class="py-8 rounded-lg shadow-2xl shadow-gray-700  sm:col-span-3 md:col-span-3 lg:col-span-1">
+                <p class="text-center"><i class="fa-solid fa-pen text-3xl bg-yellow-300 rounded-full p-4"></i></p>
+                <h3 class="text-center">Established</h3>
+                <p class="text-center mt-5 font-medium">In</p>
+                <h2 class="text-center text-4xl font-bold">2015</h2>
+            </div>
+            <div class="py-8 rounded-lg shadow-2xl shadow-gray-700  sm:col-span-3 md:col-span-3 lg:col-span-1">
+                <p class="text-center"><i class="fa-solid fa-earth-asia text-3xl bg-yellow-300 rounded-full p-4"></i>
+                </p>
+                <h3 class="text-center">Spread across</h3>
+                <p class="text-center mt-5 font-medium">Over</p>
+                <h2 class="text-center text-4xl font-bold">30 Cities</h2>
+                <p class="text-center">Around Indonesia</p>
+            </div>
+            <div class="py-8 rounded-lg shadow-2xl shadow-gray-700 sm:col-span-3">
+                <p class="text-center"><i class="fa-solid fa-award text-3xl bg-yellow-300 rounded-full p-4"></i></p>
+                <h3 class="text-center">Achievment of</h3>
+                <h2 class="text-center text-4xl font-bold">The most luxurious housing 2022</h2>
+                <p class="text-center">by</p>
+                <h2 class="text-center text-4xl font-bold">International Grade</h2>
+            </div>
+        </div>
+
+        <!-- content3 -->
+        <h2 class="mb-8 mt-32 text-4xl text-yellow-400 font-bold text-center font-Poppins">
+            What do they say about us?
+        </h2>
+        <div class="flex justify-center font-Poppins">
+            <div class="grid grid-cols-2 gap-8 sm:px-4 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+                <div href="#"
+                    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg sm:py-3 md:flex-row md:max-w-xl px-5 shadow-lg shadow-gray-500">
+                    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                        src="img/pexels-simon-robben-614810.jpg" alt="">
+                    <div class="flex flex-col justify-between p-4 leading-normal">
+                        <h5 class="mb-2 text-2xl font-medium tracking-tight text-gray-900 dark:text-white">Mr.Oogwey
+                        </h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. Asperiores, cum hic ex pariatur nisi quod corrupti ad
+                            architecto perferendis sit?</p>
+                    </div>
+                </div>
+
+
+                <div href="#"
+                    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg sm:py-3 md:flex-row md:max-w-xl px-5 shadow-lg shadow-gray-500">
+                    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                        src="img/pexels-pixabay-262391.jpg" style="width: 220px;" alt="">
+                    <div class="flex flex-col justify-between p-4 leading-normal">
+                        <h5 class="mb-2 text-2xl font-medium tracking-tight text-gray-900 dark:text-white">Mr.Patrick
+                        </h5>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Possimus quaerat, deserunt beatae veniam dicta harum fugiat
+                            odio mollitia error quis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END PROFILE -->
+
+        <!-- SLOGAN -->
+        <div class="grid grid-cols-1 mt-28 max-w-xl mx-auto">
+            <div class="py-8 rounded-lg shadow-2xl shadow-gray-700 font-Poppins">
+                <blockquote class="text-2xl text-center">
+                    "Your Comfort is our <span class="text-yellow-400">PRIORITY</span>."
+                </blockquote>
+                <p class="text-center"><span class="text-yellow-400 font-Poppins font-semibold">MOVE</span>
+                    Enterprise</p>
+            </div>
+        </div>
+
+        <!-- PROVIDES -->
+        <h2 class="mb-8 mt-48 text-4xl text-yellow-400 font-bold text-center font-Poppins">We Are Providing</h2>
+        <div class="grid grid-cols-4 gap-11 px-3 mt-32 font-Poppins">
+            <div class="py-8 rounded-lg shadow-2xl shadow-gray-700 sm:col-span-3 md:col-span-3 lg:col-span-2">
+                <p class="text-center"><i class="fa-solid fa-house text-3xl bg-yellow-300 rounded-full p-4"></i></p>
+                <h3 class="text-center">Property sold</h3>
+                <p class="text-center mt-5 font-medium">Over</p>
+                <h2 class="text-center text-4xl font-bold">1800 Units</h2>
+            </div>
+            <div class="py-8 rounded-lg shadow-2xl shadow-gray-700  sm:col-span-3 md:col-span-3 lg:col-span-1">
+                <p class="text-center"><i class="fa-solid fa-pen text-3xl bg-yellow-300 rounded-full p-4"></i></p>
+                <h3 class="text-center">Established</h3>
+                <p class="text-center mt-5 font-medium">In</p>
+                <h2 class="text-center text-4xl font-bold">2015</h2>
+            </div>
+            <div class="py-8 rounded-lg shadow-2xl shadow-gray-700  sm:col-span-3 md:col-span-3 lg:col-span-1">
+                <p class="text-center"><i class="fa-solid fa-earth-asia text-3xl bg-yellow-300 rounded-full p-4"></i>
+                </p>
+                <h3 class="text-center">Spread across</h3>
+                <p class="text-center mt-5 font-medium">Over</p>
+                <h2 class="text-center text-4xl font-bold">30 Cities</h2>
+                <p class="text-center">Around Indonesia</p>
+            </div>
+            <div class="py-8 rounded-lg shadow-2xl shadow-gray-700  sm:col-span-3 md:col-span-3 lg:col-span-1">
+                <p class="text-center"><i class="fa-solid fa-earth-asia text-3xl bg-yellow-300 rounded-full p-4"></i>
+                </p>
+                <h3 class="text-center">Spread across</h3>
+                <p class="text-center mt-5 font-medium">Over</p>
+                <h2 class="text-center text-4xl font-bold">30 Cities</h2>
+                <p class="text-center">Around Indonesia</p>
+            </div>
+            <div class="py-8 rounded-lg shadow-2xl shadow-gray-700 sm:col-span-1">
+                <p class="text-center"><i class="fa-solid fa-award text-3xl bg-yellow-300 rounded-full p-4"></i></p>
+                <h3 class="text-center">Achievment of</h3>
+                <h2 class="text-center text-4xl font-bold">The most luxurious housing 2022</h2>
+                <p class="text-center">by</p>
+                <h2 class="text-center text-4xl font-bold">International Grade</h2>
+            </div>
+        </div>
+        <!-- END PROVIDES -->
         <!-- END CONTENT -->
         <script src="https://kit.fontawesome.com/e81773e2de.js" crossorigin="anonymous"></script>
         <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
