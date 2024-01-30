@@ -15,6 +15,10 @@
             * {
                 scroll-behavior: smooth;
             }
+
+            #isian{
+                display: none;
+            }
         </style>
     </head>
 
@@ -249,7 +253,6 @@
         <!-- CONTENT -->
 
         <!-- PROFILE -->
-
         <!-- content1 -->
         <div class="container mx-auto max-w-md mt-24 lg:flex lg:max-w-full lg:p-0" id="satu">
             <div class="px-6 lg:mt-10">
@@ -389,24 +392,53 @@
             <div class="py-8 rounded-lg shadow-2xl shadow-gray-700 sm:col-span-3 md:col-span-3 lg:col-span-2">
                 <p class="text-center"><i
                         class="fa-solid fa-dumbbell text-3xl bg-slate-600 text-white rounded-lg p-4"></i></p>
-                <h2 class="text-center text-4xl font-medium mt-9"><span class="text-yellow-400 font-bold">MOVE</span> Gym</h2>
+                <h2 class="text-center text-4xl font-medium mt-9"><span class="text-yellow-400 font-bold">MOVE</span>
+                    Gym</h2>
             </div>
 
             <div class="py-8 rounded-lg shadow-2xl shadow-gray-700  sm:col-span-3 md:col-span-3 lg:col-span-1">
                 <p class="text-center"><i class="fa-solid fa-shop text-3xl bg-lime-300 rounded-lg p-4"></i>
                 </p>
-                <h2 class="text-center text-4xl font-medium mt-9"><span class="text-yellow-400 font-bold">MOVE</span> Mall</h2>
+                <h2 class="text-center text-4xl font-medium mt-9"><span class="text-yellow-400 font-bold">MOVE</span>
+                    Mall</h2>
             </div>
 
             <div class="py-8 rounded-lg shadow-2xl shadow-gray-700  sm:col-span-3 md:col-span-3 lg:col-span-4">
                 <p class="text-center"><i class="fa-solid fa-person-swimming text-3xl bg-blue-600 rounded-lg p-4"></i>
                 </p>
-                <h2 class="text-center text-4xl font-medium mt-9"><span class="text-yellow-400 font-bold">MOVE</span> Swimming pool</h2>
+                <h2 class="text-center text-4xl font-medium mt-9"><span class="text-yellow-400 font-bold">MOVE</span>
+                    Swimming pool</h2>
             </div>
 
 
         </div>
         <!-- END PROVIDES -->
+
+        <!-- FEATURED -->
+        <h2 class="mb-8 mt-52 text-4xl text-yellow-400 font-bold text-center font-Poppins">Our Featured Properties</h2>
+
+
+        <div class="grid grid-cols-2 lg:gap-16 lg:px-36 sm:px-4 sm:gap-4 md:px-4 ">
+            <div class="shadow-lg shadow-gray-500 rounded-lg  cursor-pointer" id="card">
+                <img class="h-auto max-w-full rounded-lg" src="img/pexels-luis-yanez-206172.jpg" style="height: 100%;"
+                    alt="">
+                <div id="isian">
+                    <h1>Feel Interested?</h1>
+                    <button>Buy here</button>
+                </div>
+            </div>
+            <div class="shadow-lg shadow-gray-500 rounded-lg cursor-pointer">
+                <img class="h-auto max-w-full rounded-lg" src="img/pexels-pixabay-221540.jpg" alt="">
+            </div>
+            <div class="shadow-lg shadow-gray-500 rounded-lg cursor-pointer">
+                <img class="h-auto max-w-full rounded-lg" src="img/pexels-pixabay-208736.jpg" style="height: 100%;"
+                    alt="">
+            </div>
+            <div class="shadow-lg shadow-gray-500 rounded-lg cursor-pointer">
+                <img class="h-auto max-w-full rounded-lg" src="img/pexels-scott-webb-1029599.jpg" alt="">
+            </div>
+        </div>
+
         <!-- END CONTENT -->
         <script src="https://kit.fontawesome.com/e81773e2de.js" crossorigin="anonymous"></script>
         <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
