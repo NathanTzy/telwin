@@ -1,0 +1,51 @@
+
+*{
+    scroll-behavior:smooth;
+}
+
+            #kar {
+                transition: .3s;
+            }
+
+            #kar:hover {
+                transform: scale(0.9);
+            }
+
+            .kembali {
+                position: fixed;
+                width: 80px;
+                height: 80px;
+                right: 2%;
+                bottom: 5%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(217, 217, 217);
+                border-radius: 50%;
+                z-index: 22;
+                transform: translateY(1000px);
+                transition: .5s;
+            }
+
+            .kembali span {
+                margin-top: 10px;
+                width: 30px;
+                height: 30px;
+                border-top: solid 7px rgb(255, 170, 0);
+                border-right: solid 7px rgb(255, 255, 255);
+                transform: rotate(-45deg);
+                border-radius: 5px;
+            }
+
+            .kembali.block {
+                transform: translatey(0);
+            }
+
+            .kembali:hover {
+                background-color: rgb(151, 151, 151);
+            }
+
+            .kembali:hover span {
+                border-top: solid 7px rgb(255, 255, 255);
+                border-right: solid 7px rgb(255, 153, 0);
+            }
