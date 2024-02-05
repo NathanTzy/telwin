@@ -1849,6 +1849,10 @@ input:checked + .toggle-bg {
   text-align: center;
 }
 
+.align-middle {
+  vertical-align: middle;
+}
+
 .font-Poppins {
   font-family: Poppins;
 }
@@ -2407,6 +2411,10 @@ input:checked + .toggle-bg {
     grid-column: span 3 / span 3;
   }
 
+  .sm\:col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+
   .sm\:float-end {
     float: inline-end;
   }
@@ -2502,6 +2510,10 @@ input:checked + .toggle-bg {
     grid-column: span 3 / span 3;
   }
 
+  .md\:col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+
   .md\:ms-2 {
     margin-inline-start: 0.5rem;
   }
@@ -2536,6 +2548,10 @@ input:checked + .toggle-bg {
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-96 {
+    width: 24rem;
   }
 
   .md\:max-w-xl {
@@ -2594,6 +2610,10 @@ input:checked + .toggle-bg {
     padding: 1.25rem;
   }
 
+  .md\:p-44 {
+    padding: 11rem;
+  }
+
   .md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -2601,6 +2621,10 @@ input:checked + .toggle-bg {
 
   .md\:ps-40 {
     padding-inline-start: 10rem;
+  }
+
+  .md\:ps-4 {
+    padding-inline-start: 1rem;
   }
 
   .md\:text-center {
