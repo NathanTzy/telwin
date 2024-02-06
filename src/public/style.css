@@ -1849,10 +1849,6 @@ input:checked + .toggle-bg {
   text-align: center;
 }
 
-.align-middle {
-  vertical-align: middle;
-}
-
 .font-Poppins {
   font-family: Poppins;
 }
@@ -2062,6 +2058,42 @@ input:checked + .toggle-bg {
   outline-style: solid;
 }
 
+.outline-dashed {
+  outline-style: dashed;
+}
+
+.outline-dotted {
+  outline-style: dotted;
+}
+
+.outline-double {
+  outline-style: double;
+}
+
+.outline-4 {
+  outline-width: 4px;
+}
+
+.outline-1 {
+  outline-width: 1px;
+}
+
+.outline-offset-2 {
+  outline-offset: 2px;
+}
+
+.outline-gray-400 {
+  outline-color: #9CA3AF;
+}
+
+.outline-cyan-500 {
+  outline-color: #06b6d4;
+}
+
+.outline-gray-500 {
+  outline-color: #6B7280;
+}
+
 .blur {
   --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -2167,6 +2199,18 @@ input:checked + .toggle-bg {
 
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+.hover\:outline-dashed:hover {
+  outline-style: dashed;
+}
+
+.hover\:outline-2:hover {
+  outline-width: 2px;
+}
+
+.hover\:outline-white:hover {
+  outline-color: #ffffff;
 }
 
 .focus\:z-10:focus {
@@ -2329,6 +2373,14 @@ input:checked + .toggle-bg {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+:is(.dark .dark\:outline) {
+  outline-style: solid;
+}
+
+:is(.dark .dark\:outline-white) {
+  outline-color: #ffffff;
+}
+
 :is(.dark .dark\:ring-offset-gray-800) {
   --tw-ring-offset-color: #1F2937;
 }
@@ -2409,10 +2461,6 @@ input:checked + .toggle-bg {
 
   .sm\:col-span-3 {
     grid-column: span 3 / span 3;
-  }
-
-  .sm\:col-span-4 {
-    grid-column: span 4 / span 4;
   }
 
   .sm\:float-end {
@@ -2510,10 +2558,6 @@ input:checked + .toggle-bg {
     grid-column: span 3 / span 3;
   }
 
-  .md\:col-span-4 {
-    grid-column: span 4 / span 4;
-  }
-
   .md\:ms-2 {
     margin-inline-start: 0.5rem;
   }
@@ -2548,10 +2592,6 @@ input:checked + .toggle-bg {
 
   .md\:w-auto {
     width: auto;
-  }
-
-  .md\:w-96 {
-    width: 24rem;
   }
 
   .md\:max-w-xl {
@@ -2610,10 +2650,6 @@ input:checked + .toggle-bg {
     padding: 1.25rem;
   }
 
-  .md\:p-44 {
-    padding: 11rem;
-  }
-
   .md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -2621,10 +2657,6 @@ input:checked + .toggle-bg {
 
   .md\:ps-40 {
     padding-inline-start: 10rem;
-  }
-
-  .md\:ps-4 {
-    padding-inline-start: 1rem;
   }
 
   .md\:text-center {
