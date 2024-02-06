@@ -1312,6 +1312,14 @@ input:checked + .toggle-bg {
   height: 100vh;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
+.h-72 {
+  height: 18rem;
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -1846,12 +1854,103 @@ input:checked + .toggle-bg {
   padding-bottom: 2rem;
 }
 
+.py-\[207px\] {
+  padding-top: 207px;
+  padding-bottom: 207px;
+}
+
+.py-\[20px\] {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.py-\[2px\] {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.py-\[203px\] {
+  padding-top: 203px;
+  padding-bottom: 203px;
+}
+
+.py-\[201px\] {
+  padding-top: 201px;
+  padding-bottom: 201px;
+}
+
+.py-\[198px\] {
+  padding-top: 198px;
+  padding-bottom: 198px;
+}
+
+.py-\[196px\] {
+  padding-top: 196px;
+  padding-bottom: 196px;
+}
+
+.py-\[195px\] {
+  padding-top: 195px;
+  padding-bottom: 195px;
+}
+
+.py-\[191px\] {
+  padding-top: 191px;
+  padding-bottom: 191px;
+}
+
+.py-\[190px\] {
+  padding-top: 190px;
+  padding-bottom: 190px;
+}
+
+.py-\[1px\] {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.py-\[185px\] {
+  padding-top: 185px;
+  padding-bottom: 185px;
+}
+
+.py-\[180px\] {
+  padding-top: 180px;
+  padding-bottom: 180px;
+}
+
+.py-\[179px\] {
+  padding-top: 179px;
+  padding-bottom: 179px;
+}
+
+.py-\[178px\] {
+  padding-top: 178px;
+  padding-bottom: 178px;
+}
+
 .pt-2 {
   padding-top: 0.5rem;
 }
 
+.pt-52 {
+  padding-top: 13rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
+.pt-56 {
+  padding-top: 14rem;
+}
+
 .text-center {
   text-align: center;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .font-Poppins {
@@ -1896,6 +1995,11 @@ input:checked + .toggle-bg {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .font-bold {
@@ -2101,8 +2205,37 @@ input:checked + .toggle-bg {
   transition-duration: 150ms;
 }
 
+.duration-75 {
+  transition-duration: 75ms;
+}
+
+.duration-100 {
+  transition-duration: 100ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.hover\:h-96:hover {
+  height: 24rem;
+}
+
+.hover\:translate-x-10:hover {
+  --tw-translate-x: 2.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:rounded-xl:hover {
+  border-radius: 0.75rem;
+}
+
+.hover\:rounded-2xl:hover {
+  border-radius: 1rem;
 }
 
 .hover\:border-gray-300:hover {
@@ -2145,6 +2278,146 @@ input:checked + .toggle-bg {
   background-color: rgb(159 88 10 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-slate-900:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-transparent:hover {
+  background-color: transparent;
+}
+
+.hover\:bg-opacity-20:hover {
+  --tw-bg-opacity: 0.2;
+}
+
+.hover\:bg-opacity-5:hover {
+  --tw-bg-opacity: 0.05;
+}
+
+.hover\:bg-opacity-50:hover {
+  --tw-bg-opacity: 0.5;
+}
+
+.hover\:p-96:hover {
+  padding: 24rem;
+}
+
+.hover\:py-56:hover {
+  padding-top: 14rem;
+  padding-bottom: 14rem;
+}
+
+.hover\:py-64:hover {
+  padding-top: 16rem;
+  padding-bottom: 16rem;
+}
+
+.hover\:py-60:hover {
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+}
+
+.hover\:py-5:hover {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.hover\:py-4:hover {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.hover\:py-48:hover {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
+.hover\:py-\[\]:hover {
+  padding-top: ;
+  padding-bottom: ;
+}
+
+.hover\:py-\[60px\]:hover {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.hover\:py-\[1000px\]:hover {
+  padding-top: 1000px;
+  padding-bottom: 1000px;
+}
+
+.hover\:py-\[800px\]:hover {
+  padding-top: 800px;
+  padding-bottom: 800px;
+}
+
+.hover\:py-\[500px\]:hover {
+  padding-top: 500px;
+  padding-bottom: 500px;
+}
+
+.hover\:py-\[300px\]:hover {
+  padding-top: 300px;
+  padding-bottom: 300px;
+}
+
+.hover\:py-\[200px\]:hover {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hover\:py-\[250px\]:hover {
+  padding-top: 250px;
+  padding-bottom: 250px;
+}
+
+.hover\:py-\[220px\]:hover {
+  padding-top: 220px;
+  padding-bottom: 220px;
+}
+
+.hover\:py-\[210px\]:hover {
+  padding-top: 210px;
+  padding-bottom: 210px;
+}
+
+.hover\:py-\[215px\]:hover {
+  padding-top: 215px;
+  padding-bottom: 215px;
+}
+
+.hover\:py-\[212px\]:hover {
+  padding-top: 212px;
+  padding-bottom: 212px;
+}
+
+.hover\:py-\[213px\]:hover {
+  padding-top: 213px;
+  padding-bottom: 213px;
+}
+
+.hover\:py-\[211px\]:hover {
+  padding-top: 211px;
+  padding-bottom: 211px;
+}
+
+.hover\:py-\[208px\]:hover {
+  padding-top: 208px;
+  padding-bottom: 208px;
+}
+
+.hover\:py-\[205px\]:hover {
+  padding-top: 205px;
+  padding-bottom: 205px;
+}
+
+.hover\:py-\[207px\]:hover {
+  padding-top: 207px;
+  padding-bottom: 207px;
+}
+
 .hover\:text-black:hover {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -2177,6 +2450,10 @@ input:checked + .toggle-bg {
 
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
 }
 
 .focus\:z-10:focus {
@@ -2218,6 +2495,10 @@ input:checked + .toggle-bg {
 .focus\:ring-yellow-300:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(250 202 21 / var(--tw-ring-opacity));
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
 }
 
 :is(.dark .dark\:border-blue-500) {
