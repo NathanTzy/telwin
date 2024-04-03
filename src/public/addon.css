@@ -1,0 +1,71 @@
+* {
+  scroll-behavior: smooth;
+}
+
+/* Tambahkan transisi untuk efek animasi */
+#nav-link {
+  position: relative;
+  text-decoration: none;
+  color: inherit; /* Sesuaikan warna teks dengan latar belakang */
+}
+
+/* Garis bawah */
+#nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Mulai dari tengah */
+  bottom: 0;
+  width: 0;
+  height: 2px; /* Atur ketebalan garis */
+  background-color: transparent; /* Warna garis */
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out,
+    background-color 0.3s ease-in-out; /* Transisi lebar, posisi, dan warna */
+}
+
+/* Animasi garis bawah saat dihover */
+#nav-link:hover::after {
+  width: 100%; /* Lebarkan garis saat dihover */
+  left: 0; /* Geser garis dari kiri */
+  background-color: #008000; /* Warna garis saat dihover */
+}
+
+#bar {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.1px);
+  -webkit-backdrop-filter: blur(7.1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.read-more .text {
+  max-height: 0;
+  overflow: hidden;
+
+  transition: max-height 1.5s ease-out;
+}
+
+.read-more.active .text {
+  max-height: 1000px; /* Atur ketinggian sesuai kebutuhan */
+}
+#boxes,
+i {
+  transition: ease 0.2s;
+}
+#boxes:hover {  
+  cursor: pointer;
+  background: #c0c0c0;
+  transform: scale(1.1);
+  h5,
+  p {
+    color: white;
+  }
+  i {
+    transform: translateY(-10px);
+
+    color: yellow;
+  }
+  #p {
+    color: yellow;
+  }
+}
+
