@@ -12,16 +12,85 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500&display=swap"
             rel="stylesheet">
         <link rel="stylesheet" href="addon.css">
+
+        <style>
+            @media (max-width: 769px) {
+                .slider {
+                    width: 50vh;
+                }
+            }
+
+            @media (max-width: 426px) {
+                #satu {
+                    display: none;
+                }
+
+                #about {
+                    font-size: 3rem;
+                }
+
+                #biru {
+                    margin: 0 20px;
+                }
+
+                .slider {
+                    width: 66.7vh;
+                }
+
+                .item {
+                    display: flex;
+                    flex-direction: column;
+
+                    & .image {
+                        width: 140px;
+                        padding-right: 10px;
+                    }
+                }
+
+                #foot ul,
+                a,
+                p {
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                }
+                .text-6xl{
+                    font-size: 2rem;
+                }
+            }
+
+            @media (max-width:376px) {
+                .slider{
+                    width: 67vh;
+                }
+                .text-6xl{
+                    font-size: 2rem;
+                }
+                .slider{
+                    margin-right: -3.2rem;
+                }
+                .item {
+                    display: flex;
+                    flex-direction: column;
+
+                    & .image {
+                        width: 100px;
+                        margin-right: 3rem;
+                    }
+                }
+            }
+        </style>
     </head>
 
     <body class="font-Poppins">
         <!-- navtzy -->
-        <nav class="border-gray-200 bg-gray-100 dark:bg-gray-800 dark:border-gray-700 sm:hidden md:block lg:block">
+        <nav class="border-gray-200 bg-gray-100 dark:bg-gray-800 dark:border-gray-700 ">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src="img/LOGO PROETAWA.png" alt="Logo" width="150px" class="cursor-default" />
                 </a>
-                <button data-collapse-toggle="navbar-solid-bg" type="button"
+                <button data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
+                    aria-controls="drawer-navigation" type="button"
                     class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="navbar-solid-bg" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
@@ -49,65 +118,29 @@
                                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
                                     aria-labelledby="dropdownLargeButton">
                                     <li>
-                                        <a href="#profile"
+                                        <a href="#about"
                                             class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">profile</a>
                                     </li>
                                     <li>
                                         <a href="#kelebihan"
                                             class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kelebihan</a>
                                     </li>
-                                    <li>
-                                        <a href="#lisence"
-                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Lisensi</a>
-                                    </li>
                                 </ul>
                             </div>
                         </li>
                         </li>
                         <li id="nav-link">
-                            <a href="#"
-                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Galeri</a>
+                            <a href="#lisence"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Lisensi</a>
                         </li>
                         <li id="nav-link">
-                            <a href="#"
+                            <a href="#test"
                                 class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Testimoni</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-
-        <!-- downtzy -->
-        <div class="flex justify-center">
-            <div class="fixed bottom-0 bg-gray-100 lg:hidden md:hidden sm:block p-4 mb-5 rounded-full">
-                <div id="mobile-menu z-50">
-                    <div class="pt-3 flex">
-
-                        <!-- kosongan -->
-                        <a href="#" class="text-black rounded-md text-base font-medium hidden disabled">disable</a>
-
-                        <div class="flex flex-col">
-                            <i class="fa-solid fa-house text-center text-[1.4rem]"></i>
-                            <a href="#" class="text-black  block px-3 py-2 rounded-md text-[1.4rem] font-medium">About
-                                us</a>
-                        </div>
-
-                        <div class="flex flex-col mx-16">
-                            <i class="fa-solid fa-clipboard text-[1.4rem] text-center"></i>
-                            <a href="#"
-                                class="text-black  block px-3 py-2 rounded-md text-[1.4rem] font-medium">Gallery</a>
-                        </div>
-
-                        <div class="flex flex-col">
-                            <i class="fa-solid fa-user-check text-[1.4rem] text-center"></i>
-                            <a href="#"
-                                class="text-black  block px-3 py-2 rounded-md text-[1.4rem] font-medium">Testimony</a>
-                        </div>
-                        <!-- Tambahkan opsi menu lainnya di sini -->
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
         <!-- ambatron -->
@@ -136,16 +169,12 @@
                             <i class="fa-solid fa-basket-shopping ms-2 mt-[3px]"></i>
                         </a>
 
-                        <div>
-                            <a href="#"
-                                class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-                                Contact
-                                <i class="fa-solid fa-phone-volume ms-2 mt-[4px]"></i>
-                            </a>
+                        <a href="#"
+                            class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                            Contact
+                            <i class="fa-solid fa-phone-volume ms-2 mt-[4px]"></i>
+                        </a>
 
-
-
-                        </div>
                     </div>
                 </div>
 
@@ -217,9 +246,9 @@
         </section>
 
         <!-- isi -->
-        <h1 class="text-6xl text-center mt-20 font-medium" id="profile">Tentang kami</h1>
+        <h1 class="text-6xl text-center mt-20 font-medium" id="about">Tentang kami</h1>
 
-        <div class="xl:grid xl:grid-cols-2 mt-7 lg:flex lg:flex-col md:flex md:flex-col  sm:hidden">
+        <div id="satu" class="xl:grid xl:grid-cols-2 mt-7 lg:flex lg:flex-col md:flex md:flex-col  sm:hidden">
             <div class="xl:mx-16  xl:mt-5 lg:mt-0  xl:order-1 md:order-2 lg:mx-10 md:mx-10">
                 <div class="read-more">
                     <p>Perusahaan Milkta Gemilang yang didirikan sebagai pabrik susu kambing pada tahun 2008, dan
@@ -253,12 +282,10 @@
             </div>
         </div>
 
-        <div class="flex flex-col  md:hidden lg:hidden sm:block">
+        <div class="flex flex-col md:hidden lg:hidden sm:block">
             <div class=" mt-5">
-
                 <div class="-mb-16"> <img class="mx-auto" src="img/LOGO PROETAWA.png" alt="" width="300px"></div>
-
-                <div class="max-w-lg mx-auto bg-slate-200 p-4 pt-16 rounded-md ">
+                <div class="max-w-lg mx-auto bg-slate-200 p-4 pt-16 rounded-md" id="biru">
                     <div class="read-more text-center">
                         <p>Perusahaan Milkta Gemilang yang didirikan sebagai pabrik susu kambing pada tahun 2008, dan
                             berlokasi di
@@ -272,8 +299,8 @@
                             susu kambing
                             untuk semua demografi. Merintis formulasi gula aren dan susu kambing dalam produk konsumen
                             di seluruh
-                            Indonesia dan pasar global. </p>
-                        <p class="text">Dengan lahan pertaniannya yang kaya, curah hujan yang tinggi dan iklim yang
+                            Indonesia dan pasar global. Dengan lahan pertaniannya yang kaya, curah hujan yang tinggi dan
+                            iklim yang
                             menguntungkan, Sleman dihormati sebagai "kampung halaman kambing perah Indonesia" dan
                             "ibukota produk susu kambing Indonesia". Di Sleman Yogyakarta memiliki peternakan terbuka
                             alami sendiri untuk kambing perah. Pada tahun 2016, perusahaan telah memiliki lebih dari
@@ -283,7 +310,6 @@
                             pelanggan dengan 100% susu bubuk alami, juga berkonsentrasi pada mengadopsi yang memiliki
                             teknologi pemrosesan kelas dunia untuk memastikan keandalan, keamanan dan kualitas tinggi
                             untuk produk.</p>
-                        <button class="btn-read-more underline font-bold">Read More</button>
                     </div>
                 </div>
             </div>
@@ -385,35 +411,40 @@
             </div>
         </div>
 
-        <h1 class="text-6xl text-center mt-48 font-medium" id="lisence">Lisensi</h1>
+        <h1 class="text-6xl text-center mt-64 font-medium" id="lisence">Lisensi</h1>
         <div class="flex justify-center">
             <marquee width="100%" behavior="scroll" scrollamount="10" direction="left">
                 <div class="my-10 flex">
 
                     <img data-modal-target="default-modal" data-modal-toggle="default-modal"
                         class="cursor-pointer me-16 hover:-translate-y-5 duration-150" src="img/BPOM ProEtawa HAL.1.png"
-                        alt="" width="400px">
+                        alt="" style="width:250px ; height: 350px;">
 
 
                     <img src="img/GMP ProEtawa.png" alt="" data-modal-target="default-modal-2"
                         data-modal-toggle="default-modal-2"
-                        class="cursor-pointer me-16 hover:-translate-y-5 duration-150" width="400px">
+                        class="cursor-pointer me-16 hover:-translate-y-5 duration-150"
+                        style="width:250px ; height: 350px;">
 
                     <img src="img/HACCP ProEtawa.png" alt="" data-modal-target="default-modal-3"
                         data-modal-toggle="default-modal-3"
-                        class="cursor-pointer me-16 hover:-translate-y-5 duration-150" width="400px">
+                        class="cursor-pointer me-16 hover:-translate-y-5 duration-150"
+                        style="width:250px ; height: 350px;">
 
                     <img src="img/HALAL ProEtawa HAL.1.png" alt="" data-modal-target="default-modal-4"
                         data-modal-toggle="default-modal-4"
-                        class="cursor-pointer me-16 hover:-translate-y-5 duration-150" width="400px">
+                        class="cursor-pointer me-16 hover:-translate-y-5 duration-150"
+                        style="width:250px ; height: 350px;">
 
                     <img src="img/HALAL ProEtawa HAL.2.png" alt="" data-modal-target="default-modal-5"
                         data-modal-toggle="default-modal-5"
-                        class="cursor-pointer me-16 hover:-translate-y-5 duration-150" width="400px">
+                        class="cursor-pointer me-16 hover:-translate-y-5 duration-150"
+                        style="width:250px ; height: 350px;">
 
                     <img src="img/ISO ProEtawa.png" alt="" data-modal-target="default-modal-6"
                         data-modal-toggle="default-modal-6"
-                        class="cursor-pointer me-16 hover:-translate-y-5 duration-150" width="400px">
+                        class="cursor-pointer me-16 hover:-translate-y-5 duration-150"
+                        style="width:250px ; height: 350px;">
                 </div>
             </marquee>
 
@@ -476,9 +507,125 @@
         </div>
 
         <!-- galeri -->
-        <div class="grid grid-cols-6">
-            <img src="" alt="">
+        <!-- <h1 class="text-6xl text-center mt-52 font-medium mb-10" id="galeri">Galeri</h1>
+        <div class="grid xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 gap-4 mx-10">
+
+          
+
+            <div class="mx-auto relative ">
+                <img src="img/1710820413443.jpg" alt="">
+                <p class="absolute bottom-0 bg-green-500 text-white p-1" style="border-radius: 0 0 0 5px;">LMAO PARAH
+                </p>
+            </div>
+            
+            <div class="mx-auto relative ">
+                <img src="img/1710820413443.jpg" alt="">
+                <p class="absolute bottom-0 bg-green-500 text-white p-1" style="border-radius: 0 0 0 5px;">LMAO PARAH
+                </p>
+            </div>
+
+            <div class="mx-auto relative xl:row-span-3 xl:block lg:hidden md:hidden sm:hidden">
+                <img class=" h-[529px] w-[480px]" src="img/20230424_081835.jpg" alt="">
+                <p class="absolute bottom-3 bg-green-500 text-white p-1" style="border-radius: 0 0 0 5px;">LMAO PARAH
+                </p>
+            </div>
+
+            <div class="mx-auto relative ">
+                <img src="img/1710820413443.jpg" alt="">
+                <p class="absolute bottom-0 bg-green-500 text-white p-1" style="border-radius: 0 0 0 5px;">LMAO PARAH
+                </p>
+            </div>
+
+
+            <div class="mx-auto relative ">
+                <img src="img/1710820413443.jpg" alt="">
+                <p class="absolute bottom-0 bg-green-500 text-white p-1" style="border-radius: 0 0 0 5px;">LMAO PARAH
+                </p>
+            </div>
+            <div class="mx-auto relative xl:block lg:hidden md:hidden sm:hidden">
+                <img class=" h-[529px] w-[480px]" src="img/20230424_081835.jpg" alt="">
+                <p class="absolute bottom-3 bg-green-500 text-white p-1" style="border-radius: 0 0 0 5px;">LMAO PARAH
+                </p>
+            </div>
+
+
+        </div> -->
+
+        <!-- testimoni -->
+        <h1 class="text-6xl text-center mt-72 font-medium mb-10" id="test">Apa kata mereka?</h1>
+        <div class="slide">
+            <main>
+                <ul class='slider'>
+                    <li class='item'>
+                        <div class='testimonial'>
+                            <p>"Semenjak konsumsi Susu Kambing ProEtawa, Kolestrol dan Diabetes saya menjadi turun dan
+                                suatu ikhtiar segala keluhan."</p>
+                            <p>Bambang (50 Tahun)</p>
+                            <p>Penderita KOLESTROL & DIABETES</p>
+                        </div>
+                        <img class='image' src='https://source.unsplash.com/IF9TK5Uy-KI'>
+                    </li>
+                    <li class='item'>
+                        <div class='testimonial'>
+                            <p>"Susu Kambing ProEtawa membuat gula darah saya cepat turun & badan segar kembali."</p>
+                            <p>Ahmad Qasim, S.Pd.I., M.Pd.I., (45 Tahun)</p>
+                            <p>Pengidap DIABETES</p>
+                        </div>
+                        <img class='image' src='https://source.unsplash.com/C5XyLljkMrY'>
+                    </li>
+                    <li class='item'>
+                        <div class='testimonial'>
+                            <p>"Rasanya enak, segar, dan bervitamin. Dan setelah mengkonsumsinya Kolestrol saya mulai
+                                turun."</p>
+                            <p>dr. H. Ahmad Rzal, MA (64 Tahun)</p>
+                            <p>Pengidap KOLESTROL</p>
+                        </div>
+                        <img class='image' src='https://source.unsplash.com/e12wQLAjQi0'>
+                    </li>
+                </ul>
+                <nav>
+                    <button class='btn' data-index='0'></button>
+                    <button class='btn' data-index='1'></button>
+                    <button class='btn' data-index='2'></button>
+                </nav>
+            </main>
         </div>
+
+
+        <!-- footer -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#6AA121" fill-opacity="1"
+                d="M0,128L16,160C32,192,64,256,96,245.3C128,235,160,149,192,101.3C224,53,256,43,288,53.3C320,64,352,96,384,128C416,160,448,192,480,197.3C512,203,544,181,576,186.7C608,192,640,224,672,229.3C704,235,736,213,768,218.7C800,224,832,256,864,250.7C896,245,928,203,960,197.3C992,192,1024,224,1056,202.7C1088,181,1120,107,1152,74.7C1184,43,1216,53,1248,96C1280,139,1312,213,1344,245.3C1376,277,1408,267,1424,261.3L1440,256L1440,320L1424,320C1408,320,1376,320,1344,320C1312,320,1280,320,1248,320C1216,320,1184,320,1152,320C1120,320,1088,320,1056,320C1024,320,992,320,960,320C928,320,896,320,864,320C832,320,800,320,768,320C736,320,704,320,672,320C640,320,608,320,576,320C544,320,512,320,480,320C448,320,416,320,384,320C352,320,320,320,288,320C256,320,224,320,192,320C160,320,128,320,96,320C64,320,32,320,16,320L0,320Z">
+            </path>
+        </svg>
+        <footer class="bg-[#6AA121] -mt-1">
+            <div class="w-full p-4 md:py-8">
+                <div class="sm:flex sm:flex-col md:flex-col sm:items-center" id="foot">
+                    <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                        <img src="img/LOGO PROETAWA.png" alt="Flowbite Logo" width="300px" />
+                    </a>
+                    <ul
+                        class="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0 dark:text-gray-400">
+                        <li>
+                            <a href="#about" class="hover:underline me-4 md:me-6">About</a>
+                        </li>
+                        <li>
+                            <a href="#test" class="hover:underline me-4 md:me-6">Testimony</a>
+                        </li>
+                        <li>
+                            <a href="#lisence" class="hover:underline me-4 md:me-6">Licensing</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="my-6 border-white max-w-lg sm:mx-auto lg:my-8" />
+                <p class="block text-sm text-white sm:text-center dark:text-gray-400">© 2023 <span href="#"
+                        class="hover:underline">ProEtawa Official Website</span>. All Rights Reserved.</p>
+            </div>
+        </footer>
+
 
         <script src="https://kit.fontawesome.com/e81773e2de.js" crossorigin="anonymous"></script>
         <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
