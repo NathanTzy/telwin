@@ -18,6 +18,12 @@
                 .slider {
                     width: 50vh;
                 }
+
+                #provide {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                }
             }
 
             @media (max-width: 426px) {
@@ -54,21 +60,57 @@
                     justify-content: center;
                     text-align: center;
                 }
-                .text-6xl{
+
+                .text-6xl {
                     font-size: 2rem;
+                }
+
+                .count:nth-child(2) {
+                    margin: 4rem 0;
+                }
+
+                #kand {
+                    margin: 2rem 50px;
+                }
+
+                #box-1 {
+                    padding: 15px;
+                }
+
+                #max {
+                    margin-top: .2rem;
+                }
+
+                #kand-1 {
+                    margin: 10rem 50px;
+                }
+
+                #bat {
+                    margin-top: 6rem;
+                    font-size: 1.5rem;
+                }
+
+                #hit {
+                    margin: 4rem 50px -7rem;
+                }
+                #gale{
+                    margin: 10rem 20px;
                 }
             }
 
             @media (max-width:376px) {
-                .slider{
+                .slider {
                     width: 67vh;
                 }
-                .text-6xl{
+
+                .text-6xl {
                     font-size: 2rem;
                 }
-                .slider{
+
+                .slider {
                     margin-right: -3.2rem;
                 }
+
                 .item {
                     display: flex;
                     flex-direction: column;
@@ -77,7 +119,34 @@
                         width: 100px;
                         margin-right: 3rem;
                     }
+
                 }
+
+                #bat {
+                    margin: 7rem 50px;
+                }
+
+                .slider {
+                    height: 500px;
+                }
+
+                .item {
+                    & .image {
+                        margin-top: 1.2rem;
+                    }
+
+                    & p {
+                        text-align: left;
+                    }
+                }
+
+                .btn {
+                    width: 1rem;
+                    height: 1rem;
+                    margin: 0 auto;
+                }
+
+
             }
         </style>
     </head>
@@ -91,15 +160,20 @@
                 </a>
                 <button data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
                     aria-controls="drawer-navigation" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    class="inline-flex items-center p-2 w-13 h-13 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="navbar-solid-bg" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 1h15M1 7h15M1 13h15" />
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                            <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                            <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"></path>
+                        </g>
                     </svg>
                 </button>
+
                 <div class="hidden w-full md:block md:w-auto mt-3" id="navbar-solid-bg">
                     <ul
                         class=" text-[1.2rem] flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
@@ -119,11 +193,19 @@
                                     aria-labelledby="dropdownLargeButton">
                                     <li>
                                         <a href="#about"
-                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">profile</a>
+                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profil</a>
+                                    </li>
+                                    <li>
+                                        <a href="#kandungan"
+                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kandungan</a>
+                                    </li>
+                                    <li>
+                                        <a href="#manfaat"
+                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Manfaat</a>
                                     </li>
                                     <li>
                                         <a href="#kelebihan"
-                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kelebihan</a>
+                                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Keunggulan</a>
                                     </li>
                                 </ul>
                             </div>
@@ -143,8 +225,51 @@
         </nav>
 
 
+
+        <!-- sidetzy -->
+        <!-- drawer component -->
+        <div id="drawer-navigation"
+            class="fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white dark:bg-gray-800"
+            tabindex="-1" aria-labelledby="drawer-navigation-label">
+            <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400">
+                Menu</h5>
+            <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
+                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+                <span class="sr-only">Close menu</span>
+            </button>
+            <div class="py-4 overflow-y-auto">
+
+
+                <ul class="py-2 text-2xl space-y-3 text-gray-700 dark:text-gray-400"
+                    aria-labelledby="dropdownLargeButton">
+                    <li>
+                        <a href="#about"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profil</a>
+                    </li>
+                    <li>
+                        <a href="#kandungan"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kandungan</a>
+                    </li>
+                    <li>
+                        <a href="#manfaat"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Manfaat</a>
+                    </li>
+                    <li>
+                        <a href="#kelebihan"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Keunggulan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         <!-- ambatron -->
-        <section class="bg-center bg-no-repeat bg-fixed bg-gray-400 bg-blend-multiply"
+        <section id="amba" class="bg-center bg-no-repeat bg-fixed bg-gray-400 bg-blend-multiply"
             style="background-size: cover; background-image: url('img/WhatsApp\ Image\ 2024-04-03\ at\ 1.56.04\ PM.jpeg');">
             <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
                 <div class="bg-slate-600 p-4 rounded-md" id="bar">
@@ -169,7 +294,7 @@
                             <i class="fa-solid fa-basket-shopping ms-2 mt-[3px]"></i>
                         </a>
 
-                        <a href="#"
+                        <a data-modal-target="select-modal-x" data-modal-toggle="select-modal-x" href="#"
                             class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
                             Contact
                             <i class="fa-solid fa-phone-volume ms-2 mt-[4px]"></i>
@@ -215,9 +340,8 @@
                                             class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500   hover:bg-yellow-300 hover:text-white dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
                                             <div class="block">
                                                 <div class="w-full text-lg font-semibold">Shopee</div>
-                                                <div class="w-full text-gray-500 dark:text-gray-400">Flowbite</div>
                                             </div>
-                                            <a href=""
+                                            <a href="https://shopee.co.id/Susu-Kambing-Etawa-Bubuk-ProEtawa-i.980638335.19879257577"
                                                 class="bg-black p-2 text-white rounded-md hover:bg-white hover:text-black duration-100">
                                                 <i class="fa-solid fa-cart-shopping mt-2"></i>
                                             </a>
@@ -229,9 +353,8 @@
                                             class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 0 hover:bg-green-400 hover:text-white dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
                                             <div class="block">
                                                 <div class="w-full text-lg font-semibold">Tokopedia</div>
-                                                <div class="w-full text-gray-500 dark:text-gray-400">Alphabet</div>
                                             </div>
-                                            <a href=""
+                                            <a href="https://tokopedia.link/Ej34pBcJszb"
                                                 class="bg-black p-2 text-white rounded-md hover:bg-white hover:text-black duration-100">
                                                 <i class="fa-solid fa-cart-shopping mt-2"></i>
                                             </a>
@@ -242,6 +365,185 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Main modal x -->
+                <div id="select-modal-x" tabindex="-1" aria-hidden="true"
+                    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                    <div class="relative p-4 w-full max-w-md max-h-full">
+                        <!-- Modal content -->
+                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                            <!-- Modal header -->
+                            <div
+                                class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">
+                                    Contact us
+                                </h3>
+                                <button type="button"
+                                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                    data-modal-toggle="select-modal-x">
+                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 14 14">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                    </svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="p-4 md:p-5">
+                                <ul class="space-y-4 mb-4">
+                                    <li>
+                                        <a href="http://wa.me/+628117201110"
+                                            class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
+                                            <div class="block">
+                                                <div class="w-full text-lg font-semibold">WHATSAPP</div>
+                                            </div>
+                                            <svg width="40px" height="40px" viewBox="-1.5 0 259 259" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                preserveAspectRatio="xMidYMid" fill="#000000">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <g>
+                                                        <path
+                                                            d="M67.6631045,221.823373 L71.8484512,223.916047 C89.2873956,234.379413 108.819013,239.262318 128.350631,239.262318 L128.350631,239.262318 C189.735716,239.262318 239.959876,189.038158 239.959876,127.653073 C239.959876,98.3556467 228.101393,69.7557778 207.17466,48.8290445 C186.247927,27.9023111 158.345616,16.0438289 128.350631,16.0438289 C66.9655467,16.0438289 16.7413867,66.2679889 17.4389445,128.350631 C17.4389445,149.277365 23.7169645,169.50654 34.1803311,186.945485 L36.9705622,191.130831 L25.8096378,232.28674 L67.6631045,221.823373 Z"
+                                                            fill="#00E676"> </path>
+                                                        <path
+                                                            d="M219.033142,37.66812 C195.316178,13.2535978 162.530962,0 129.048189,0 C57.8972956,0 0.697557778,57.8972956 1.39511556,128.350631 C1.39511556,150.67248 7.67313556,172.296771 18.1365022,191.828389 L0,258.096378 L67.6631045,240.657433 C86.4971645,251.1208 107.423898,256.003705 128.350631,256.003705 L128.350631,256.003705 C198.803967,256.003705 256.003705,198.106409 256.003705,127.653073 C256.003705,93.4727423 242.750107,61.3850845 219.033142,37.66812 Z M129.048189,234.379413 L129.048189,234.379413 C110.214129,234.379413 91.380069,229.496509 75.3362401,219.7307 L71.1508934,217.638027 L30.6925422,228.101393 L41.1559089,188.3406 L38.3656778,184.155253 C7.67313556,134.628651 22.3218489,69.05822 72.5460089,38.3656778 C122.770169,7.67313556 187.643042,22.3218489 218.335585,72.5460089 C249.028127,122.770169 234.379413,187.643042 184.155253,218.335585 C168.111425,228.798951 148.579807,234.379413 129.048189,234.379413 Z M190.433273,156.9505 L182.760138,153.462711 C182.760138,153.462711 171.599213,148.579807 164.623636,145.092018 C163.926078,145.092018 163.22852,144.39446 162.530962,144.39446 C160.438289,144.39446 159.043173,145.092018 157.648058,145.789576 L157.648058,145.789576 C157.648058,145.789576 156.9505,146.487133 147.184691,157.648058 C146.487133,159.043173 145.092018,159.740731 143.696902,159.740731 L142.999345,159.740731 C142.301787,159.740731 140.906671,159.043173 140.209113,158.345616 L136.721325,156.9505 L136.721325,156.9505 C129.048189,153.462711 122.072611,149.277365 116.492149,143.696902 C115.097033,142.301787 113.00436,140.906671 111.609245,139.511556 C106.72634,134.628651 101.843436,129.048189 98.3556467,122.770169 L97.658089,121.375053 C96.9605312,120.677496 96.9605312,119.979938 96.2629734,118.584822 C96.2629734,117.189707 96.2629734,115.794591 96.9605312,115.097033 C96.9605312,115.097033 99.7507623,111.609245 101.843436,109.516571 C103.238551,108.121456 103.936109,106.028782 105.331225,104.633667 C106.72634,102.540993 107.423898,99.7507623 106.72634,97.658089 C106.028782,94.1703001 97.658089,75.3362401 95.5654156,71.1508934 C94.1703001,69.05822 92.7751845,68.3606623 90.6825112,67.6631045 L88.5898378,67.6631045 C87.1947223,67.6631045 85.1020489,67.6631045 83.0093756,67.6631045 C81.6142601,67.6631045 80.2191445,68.3606623 78.8240289,68.3606623 L78.1264712,69.05822 C76.7313556,69.7557778 75.3362401,71.1508934 73.9411245,71.8484512 C72.5460089,73.2435667 71.8484512,74.6386823 70.4533356,76.0337978 C65.5704312,82.3118178 62.7802,89.9849534 62.7802,97.658089 L62.7802,97.658089 C62.7802,103.238551 64.1753156,108.819013 66.2679889,113.701918 L66.9655467,115.794591 C73.2435667,129.048189 81.6142601,140.906671 92.7751845,151.370038 L95.5654156,154.160269 C97.658089,156.252942 99.7507623,157.648058 101.145878,159.740731 C115.794591,172.296771 132.535978,181.365022 151.370038,186.247927 C153.462711,186.945485 156.252942,186.945485 158.345616,187.643042 L158.345616,187.643042 C160.438289,187.643042 163.22852,187.643042 165.321193,187.643042 C168.808982,187.643042 172.994329,186.247927 175.78456,184.852811 C177.877233,183.457696 179.272349,183.457696 180.667465,182.06258 L182.06258,180.667465 C183.457696,179.272349 184.852811,178.574791 186.247927,177.179676 C187.643042,175.78456 189.038158,174.389445 189.735716,172.994329 C191.130831,170.204098 191.828389,166.716309 192.525947,163.22852 C192.525947,161.833405 192.525947,159.740731 192.525947,158.345616 C192.525947,158.345616 191.828389,157.648058 190.433273,156.9505 Z"
+                                                            fill="#FFFFFF"> </path>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://t.me/proetawa"
+                                            class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
+                                            <div class="block">
+                                                <div class="w-full text-lg font-semibold">TELEGRAM</div>
+                                            </div>
+                                            <svg width="40px" height="40px" viewBox="0 0 256 256" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                preserveAspectRatio="xMidYMid" fill="#000000">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <g>
+                                                        <path
+                                                            d="M128,0 C57.307,0 0,57.307 0,128 L0,128 C0,198.693 57.307,256 128,256 L128,256 C198.693,256 256,198.693 256,128 L256,128 C256,57.307 198.693,0 128,0 L128,0 Z"
+                                                            fill="#40B3E0"> </path>
+                                                        <path
+                                                            d="M190.2826,73.6308 L167.4206,188.8978 C167.4206,188.8978 164.2236,196.8918 155.4306,193.0548 L102.6726,152.6068 L83.4886,143.3348 L51.1946,132.4628 C51.1946,132.4628 46.2386,130.7048 45.7586,126.8678 C45.2796,123.0308 51.3546,120.9528 51.3546,120.9528 L179.7306,70.5928 C179.7306,70.5928 190.2826,65.9568 190.2826,73.6308"
+                                                            fill="#FFFFFF"> </path>
+                                                        <path
+                                                            d="M98.6178,187.6035 C98.6178,187.6035 97.0778,187.4595 95.1588,181.3835 C93.2408,175.3085 83.4888,143.3345 83.4888,143.3345 L161.0258,94.0945 C161.0258,94.0945 165.5028,91.3765 165.3428,94.0945 C165.3428,94.0945 166.1418,94.5735 163.7438,96.8115 C161.3458,99.0505 102.8328,151.6475 102.8328,151.6475"
+                                                            fill="#D2E5F1"> </path>
+                                                        <path
+                                                            d="M122.9015,168.1154 L102.0335,187.1414 C102.0335,187.1414 100.4025,188.3794 98.6175,187.6034 L102.6135,152.2624"
+                                                            fill="#B5CFE4"> </path>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://instagram.com/proetawaofficial?igshid=YTQwZjQ0NmI0OA=="
+                                            class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
+                                            <div class="block">
+                                                <div class="w-full text-lg font-semibold">INSTAGRAM</div>
+                                            </div>
+                                            <svg width="40px" height="40px" viewBox="0 0 32 32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <rect x="2" y="2" width="28" height="28" rx="6"
+                                                        fill="url(#paint0_radial_87_7153)"></rect>
+                                                    <rect x="2" y="2" width="28" height="28" rx="6"
+                                                        fill="url(#paint1_radial_87_7153)"></rect>
+                                                    <rect x="2" y="2" width="28" height="28" rx="6"
+                                                        fill="url(#paint2_radial_87_7153)"></rect>
+                                                    <path
+                                                        d="M23 10.5C23 11.3284 22.3284 12 21.5 12C20.6716 12 20 11.3284 20 10.5C20 9.67157 20.6716 9 21.5 9C22.3284 9 23 9.67157 23 10.5Z"
+                                                        fill="white"></path>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M16 21C18.7614 21 21 18.7614 21 16C21 13.2386 18.7614 11 16 11C13.2386 11 11 13.2386 11 16C11 18.7614 13.2386 21 16 21ZM16 19C17.6569 19 19 17.6569 19 16C19 14.3431 17.6569 13 16 13C14.3431 13 13 14.3431 13 16C13 17.6569 14.3431 19 16 19Z"
+                                                        fill="white"></path>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M6 15.6C6 12.2397 6 10.5595 6.65396 9.27606C7.2292 8.14708 8.14708 7.2292 9.27606 6.65396C10.5595 6 12.2397 6 15.6 6H16.4C19.7603 6 21.4405 6 22.7239 6.65396C23.8529 7.2292 24.7708 8.14708 25.346 9.27606C26 10.5595 26 12.2397 26 15.6V16.4C26 19.7603 26 21.4405 25.346 22.7239C24.7708 23.8529 23.8529 24.7708 22.7239 25.346C21.4405 26 19.7603 26 16.4 26H15.6C12.2397 26 10.5595 26 9.27606 25.346C8.14708 24.7708 7.2292 23.8529 6.65396 22.7239C6 21.4405 6 19.7603 6 16.4V15.6ZM15.6 8H16.4C18.1132 8 19.2777 8.00156 20.1779 8.0751C21.0548 8.14674 21.5032 8.27659 21.816 8.43597C22.5686 8.81947 23.1805 9.43139 23.564 10.184C23.7234 10.4968 23.8533 10.9452 23.9249 11.8221C23.9984 12.7223 24 13.8868 24 15.6V16.4C24 18.1132 23.9984 19.2777 23.9249 20.1779C23.8533 21.0548 23.7234 21.5032 23.564 21.816C23.1805 22.5686 22.5686 23.1805 21.816 23.564C21.5032 23.7234 21.0548 23.8533 20.1779 23.9249C19.2777 23.9984 18.1132 24 16.4 24H15.6C13.8868 24 12.7223 23.9984 11.8221 23.9249C10.9452 23.8533 10.4968 23.7234 10.184 23.564C9.43139 23.1805 8.81947 22.5686 8.43597 21.816C8.27659 21.5032 8.14674 21.0548 8.0751 20.1779C8.00156 19.2777 8 18.1132 8 16.4V15.6C8 13.8868 8.00156 12.7223 8.0751 11.8221C8.14674 10.9452 8.27659 10.4968 8.43597 10.184C8.81947 9.43139 9.43139 8.81947 10.184 8.43597C10.4968 8.27659 10.9452 8.14674 11.8221 8.0751C12.7223 8.00156 13.8868 8 15.6 8Z"
+                                                        fill="white"></path>
+                                                    <defs>
+                                                        <radialGradient id="paint0_radial_87_7153" cx="0" cy="0" r="1"
+                                                            gradientUnits="userSpaceOnUse"
+                                                            gradientTransform="translate(12 23) rotate(-55.3758) scale(25.5196)">
+                                                            <stop stop-color="#B13589"></stop>
+                                                            <stop offset="0.79309" stop-color="#C62F94"></stop>
+                                                            <stop offset="1" stop-color="#8A3AC8"></stop>
+                                                        </radialGradient>
+                                                        <radialGradient id="paint1_radial_87_7153" cx="0" cy="0" r="1"
+                                                            gradientUnits="userSpaceOnUse"
+                                                            gradientTransform="translate(11 31) rotate(-65.1363) scale(22.5942)">
+                                                            <stop stop-color="#E0E8B7"></stop>
+                                                            <stop offset="0.444662" stop-color="#FB8A2E"></stop>
+                                                            <stop offset="0.71474" stop-color="#E2425C"></stop>
+                                                            <stop offset="1" stop-color="#E2425C" stop-opacity="0">
+                                                            </stop>
+                                                        </radialGradient>
+                                                        <radialGradient id="paint2_radial_87_7153" cx="0" cy="0" r="1"
+                                                            gradientUnits="userSpaceOnUse"
+                                                            gradientTransform="translate(0.500002 3) rotate(-8.1301) scale(38.8909 8.31836)">
+                                                            <stop offset="0.156701" stop-color="#406ADC"></stop>
+                                                            <stop offset="0.467799" stop-color="#6A45BE"></stop>
+                                                            <stop offset="1" stop-color="#6A45BE" stop-opacity="0">
+                                                            </stop>
+                                                        </radialGradient>
+                                                    </defs>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.tiktok.com/@proetawaofficial?_t=8lCuc4o7SZs&_r=1   "
+                                            class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
+                                            <div class="block">
+                                                <div class="w-full text-lg font-semibold">TIK TOK</div>
+                                            </div>
+                                            <svg width="40px" height="40px" viewBox="0 0 32 32" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <path
+                                                        d="M8.45095 19.7926C8.60723 18.4987 9.1379 17.7743 10.1379 17.0317C11.5688 16.0259 13.3561 16.5948 13.3561 16.5948V13.2197C13.7907 13.2085 14.2254 13.2343 14.6551 13.2966V17.6401C14.6551 17.6401 12.8683 17.0712 11.4375 18.0775C10.438 18.8196 9.90623 19.5446 9.7505 20.8385C9.74562 21.5411 9.87747 22.4595 10.4847 23.2536C10.3345 23.1766 10.1815 23.0889 10.0256 22.9905C8.68807 22.0923 8.44444 20.7449 8.45095 19.7926ZM22.0352 6.97898C21.0509 5.90039 20.6786 4.81139 20.5441 4.04639H21.7823C21.7823 4.04639 21.5354 6.05224 23.3347 8.02482L23.3597 8.05134C22.8747 7.7463 22.43 7.38624 22.0352 6.97898ZM28 10.0369V14.293C28 14.293 26.42 14.2312 25.2507 13.9337C23.6179 13.5176 22.5685 12.8795 22.5685 12.8795C22.5685 12.8795 21.8436 12.4245 21.785 12.3928V21.1817C21.785 21.6711 21.651 22.8932 21.2424 23.9125C20.709 25.246 19.8859 26.1212 19.7345 26.3001C19.7345 26.3001 18.7334 27.4832 16.9672 28.28C15.3752 28.9987 13.9774 28.9805 13.5596 28.9987C13.5596 28.9987 11.1434 29.0944 8.96915 27.6814C8.49898 27.3699 8.06011 27.0172 7.6582 26.6277L7.66906 26.6355C9.84383 28.0485 12.2595 27.9528 12.2595 27.9528C12.6779 27.9346 14.0756 27.9528 15.6671 27.2341C17.4317 26.4374 18.4344 25.2543 18.4344 25.2543C18.5842 25.0754 19.4111 24.2001 19.9423 22.8662C20.3498 21.8474 20.4849 20.6247 20.4849 20.1354V11.3475C20.5435 11.3797 21.2679 11.8347 21.2679 11.8347C21.2679 11.8347 22.3179 12.4734 23.9506 12.8889C25.1204 13.1864 26.7 13.2483 26.7 13.2483V9.91314C27.2404 10.0343 27.7011 10.0671 28 10.0369Z"
+                                                        fill="#EE1D52"></path>
+                                                    <path
+                                                        d="M26.7009 9.91314V13.2472C26.7009 13.2472 25.1213 13.1853 23.9515 12.8879C22.3188 12.4718 21.2688 11.8337 21.2688 11.8337C21.2688 11.8337 20.5444 11.3787 20.4858 11.3464V20.1364C20.4858 20.6258 20.3518 21.8484 19.9432 22.8672C19.4098 24.2012 18.5867 25.0764 18.4353 25.2553C18.4353 25.2553 17.4337 26.4384 15.668 27.2352C14.0765 27.9539 12.6788 27.9357 12.2604 27.9539C12.2604 27.9539 9.84473 28.0496 7.66995 26.6366L7.6591 26.6288C7.42949 26.4064 7.21336 26.1717 7.01177 25.9257C6.31777 25.0795 5.89237 24.0789 5.78547 23.7934C5.78529 23.7922 5.78529 23.791 5.78547 23.7898C5.61347 23.2937 5.25209 22.1022 5.30147 20.9482C5.38883 18.9122 6.10507 17.6625 6.29444 17.3494C6.79597 16.4957 7.44828 15.7318 8.22233 15.0919C8.90538 14.5396 9.6796 14.1002 10.5132 13.7917C11.4144 13.4295 12.3794 13.2353 13.3565 13.2197V16.5948C13.3565 16.5948 11.5691 16.028 10.1388 17.0317C9.13879 17.7743 8.60812 18.4987 8.45185 19.7926C8.44534 20.7449 8.68897 22.0923 10.0254 22.991C10.1813 23.0898 10.3343 23.1775 10.4845 23.2541C10.7179 23.5576 11.0021 23.8221 11.3255 24.0368C12.631 24.8632 13.7249 24.9209 15.1238 24.3842C16.0565 24.0254 16.7586 23.2167 17.0842 22.3206C17.2888 21.7611 17.2861 21.1978 17.2861 20.6154V4.04639H20.5417C20.6763 4.81139 21.0485 5.90039 22.0328 6.97898C22.4276 7.38624 22.8724 7.7463 23.3573 8.05134C23.5006 8.19955 24.2331 8.93231 25.1734 9.38216C25.6596 9.61469 26.1722 9.79285 26.7009 9.91314Z"
+                                                        fill="#000000"></path>
+                                                    <path
+                                                        d="M4.48926 22.7568V22.7594L4.57004 22.9784C4.56076 22.9529 4.53074 22.8754 4.48926 22.7568Z"
+                                                        fill="#69C9D0"></path>
+                                                    <path
+                                                        d="M10.5128 13.7916C9.67919 14.1002 8.90498 14.5396 8.22192 15.0918C7.44763 15.7332 6.79548 16.4987 6.29458 17.354C6.10521 17.6661 5.38897 18.9168 5.30161 20.9528C5.25223 22.1068 5.61361 23.2983 5.78561 23.7944C5.78543 23.7956 5.78543 23.7968 5.78561 23.798C5.89413 24.081 6.31791 25.0815 7.01191 25.9303C7.2135 26.1763 7.42963 26.4111 7.65924 26.6334C6.92357 26.1457 6.26746 25.5562 5.71236 24.8839C5.02433 24.0451 4.60001 23.0549 4.48932 22.7626C4.48919 22.7605 4.48919 22.7584 4.48932 22.7564V22.7527C4.31677 22.2571 3.95431 21.0651 4.00477 19.9096C4.09213 17.8736 4.80838 16.6239 4.99775 16.3108C5.4985 15.4553 6.15067 14.6898 6.92509 14.0486C7.608 13.4961 8.38225 13.0567 9.21598 12.7484C9.73602 12.5416 10.2778 12.3891 10.8319 12.2934C11.6669 12.1537 12.5198 12.1415 13.3588 12.2575V13.2196C12.3808 13.2349 11.4148 13.4291 10.5128 13.7916Z"
+                                                        fill="#69C9D0"></path>
+                                                    <path
+                                                        d="M20.5438 4.04635H17.2881V20.6159C17.2881 21.1983 17.2881 21.76 17.0863 22.3211C16.7575 23.2167 16.058 24.0253 15.1258 24.3842C13.7265 24.923 12.6326 24.8632 11.3276 24.0368C11.0036 23.823 10.7187 23.5594 10.4844 23.2567C11.5962 23.8251 12.5913 23.8152 13.8241 23.341C14.7558 22.9821 15.4563 22.1734 15.784 21.2774C15.9891 20.7178 15.9864 20.1546 15.9864 19.5726V3H20.4819C20.4819 3 20.4315 3.41188 20.5438 4.04635ZM26.7002 8.99104V9.9131C26.1725 9.79263 25.6609 9.61447 25.1755 9.38213C24.2352 8.93228 23.5026 8.19952 23.3594 8.0513C23.5256 8.1559 23.6981 8.25106 23.8759 8.33629C25.0192 8.88339 26.1451 9.04669 26.7002 8.99104Z"
+                                                        fill="#69C9D0"></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
         </section>
 
@@ -282,86 +584,459 @@
             </div>
         </div>
 
+
+
         <div class="flex flex-col md:hidden lg:hidden sm:block">
             <div class=" mt-5">
-                <div class="-mb-16"> <img class="mx-auto" src="img/LOGO PROETAWA.png" alt="" width="300px"></div>
+                <div class="-mb-16"> <img class="mx-auto" src="img/LOGO PROETAWA.png" alt="" width="300px">
+                </div>
                 <div class="max-w-lg mx-auto bg-slate-200 p-4 pt-16 rounded-md" id="biru">
                     <div class="read-more text-center">
-                        <p>Perusahaan Milkta Gemilang yang didirikan sebagai pabrik susu kambing pada tahun 2008, dan
+                        <p>Perusahaan Milkta Gemilang yang didirikan sebagai pabrik susu kambing pada tahun
+                            2008, dan
                             berlokasi di
                             Tridadi, Sleman, Provinsi Yogyakarta, Indonesia. Perusahaan Milkta Gemilang adalah
                             perusahaan susu
-                            kambing swasta terbesar di Indonesia. Dan klaster industri susu kambing modern yang dibentuk
+                            kambing swasta terbesar di Indonesia. Dan klaster industri susu kambing modern yang
+                            dibentuk
                             oleh modul
                             R&D, produksi, penjualan serta konstruksi basis sumber susu.
 
-                            Saat ini, telah menjadi sebuah perusahaan, yang mengkhususkan diri dalam pembuatan berbagai
+                            Saat ini, telah menjadi sebuah perusahaan, yang mengkhususkan diri dalam pembuatan
+                            berbagai
                             susu kambing
-                            untuk semua demografi. Merintis formulasi gula aren dan susu kambing dalam produk konsumen
+                            untuk semua demografi. Merintis formulasi gula aren dan susu kambing dalam produk
+                            konsumen
                             di seluruh
-                            Indonesia dan pasar global. Dengan lahan pertaniannya yang kaya, curah hujan yang tinggi dan
+                            Indonesia dan pasar global. Dengan lahan pertaniannya yang kaya, curah hujan yang
+                            tinggi dan
                             iklim yang
-                            menguntungkan, Sleman dihormati sebagai "kampung halaman kambing perah Indonesia" dan
-                            "ibukota produk susu kambing Indonesia". Di Sleman Yogyakarta memiliki peternakan terbuka
-                            alami sendiri untuk kambing perah. Pada tahun 2016, perusahaan telah memiliki lebih dari
+                            menguntungkan, Sleman dihormati sebagai "kampung halaman kambing perah Indonesia"
+                            dan
+                            "ibukota produk susu kambing Indonesia". Di Sleman Yogyakarta memiliki peternakan
+                            terbuka
+                            alami sendiri untuk kambing perah. Pada tahun 2016, perusahaan telah memiliki lebih
+                            dari
                             500.000 kambing perah, yang memastikan pasokan susu kambing segar harian yang cukup.
 
-                            Perusahaan percaya bahwa susu kambing jauh melampaui peternakan alami. Selain menyediakan
-                            pelanggan dengan 100% susu bubuk alami, juga berkonsentrasi pada mengadopsi yang memiliki
-                            teknologi pemrosesan kelas dunia untuk memastikan keandalan, keamanan dan kualitas tinggi
+                            Perusahaan percaya bahwa susu kambing jauh melampaui peternakan alami. Selain
+                            menyediakan
+                            pelanggan dengan 100% susu bubuk alami, juga berkonsentrasi pada mengadopsi yang
+                            memiliki
+                            teknologi pemrosesan kelas dunia untuk memastikan keandalan, keamanan dan kualitas
+                            tinggi
                             untuk produk.</p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <h1 class="text-6xl text-center mt-48 font-medium" id="kelebihan">Kelebihan</h1>
+        <h1 class="text-6xl text-center mt-48 font-medium" id="kandungan">Kandungan ProEtawa</h1>
         <div class="flex justify-center">
-            <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 md:mx-7 sm:mx-7  mt-11 gap-9">
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 md:mx-7 sm:mx-7  mt-11 gap-9" id="kand">
 
-                <div id="boxes"
-                    class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <!-- 1&2 -->
+                <div id="box-1"
+                    class="shadow-2xl md:col-span-1 lg:col-span-2  shadow-gray-700 bg-white border border-white rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="lg:mt-9 sm:mt-16">
+                        <div class="flex justify-center">
+                            <h1 class="font-bold text-3xl text-[gold]">Zincum (Zn)</h1>
+                        </div>
+                        <div>
+                            <p class="font-light text-2xl text-black text-center">Pembentuk sistem kekebalan
+                                tubuh.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div
+                    class="shadow-2xl md:col-span-1 lg:shadow-gray-700  p-6 bg-white border border-white rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="mt-3 text-center">
+                        <div class="flex justify-center">
+                            <h1 class="font-bold text-3xl text-[gold]">Mineral Alkaline</h1>
+                        </div>
+                        <div>
+                            <p class="font-light text-2xl text-black text-center">Baik untuk penderita Maag
+                                Kronis.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div
+                    class="shadow-2xl md:col-span-1 lg:shadow-gray-700  p-6 bg-white border border-white rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="lg:mt-5 sm:mt-7 text-center">
+                        <div class="flex justify-center">
+                            <h1 class="font-bold text-3xl text-[gold]"> Flourin + Betakasein</h1>
+                        </div>
+                        <div>
+                            <p class="font-light text-2xl text-black text-center">Baik untuk penderita
+                                Bronchitis, Asma,
+                                TBC, & Pneumonia</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5&6 -->
+                <div
+                    class="shadow-2xl md:col-span-1 lg:col-span-2 shadow-gray-700  p-6 bg-white border border-white rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="mt-5 text-center">
+                        <div class="flex justify-center">
+                            <h1 class="font-bold text-3xl text-[gold]">A2-Betakasein & Asam Amino Esensial</h1>
+                        </div>
+                        <div>
+                            <p class="font-light text-2xl text-black text-center">Pembentuk Insulin berguna bagi
+                                penderita Diabetes.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div
+                    class="shadow-2xl md:col-span-1 lg:shadow-gray-700  p-6 bg-white border border-white rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="mt-5">
+                        <div class="flex justify-center">
+                            <h1 class="font-bold text-3xl text-[gold]">Cynokobalamin</h1>
+                        </div>
+                        <div>
+                            <p class="font-light text-2xl text-black text-center">Pembentuk Zat Hb bagi
+                                penderita DBD,
+                                Anemia, & Thalasemia.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div
+                    class="shadow-2xl md:col-span-1 lg:shadow-gray-700  p-6 bg-white border border-white rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="mt-5">
+                        <div class="flex justify-center">
+                            <h1 class="font-bold text-3xl text-[gold]"> Kalium (K)</h1>
+                        </div>
+                        <div>
+                            <p class="font-light text-2xl text-black text-center">Bermanfaat bagi penderita
+                                Arteriosclerosis, Tekanan Darah Tinggi & Rendah.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 9 -->
+                <div
+                    class="shadow-2xl md:col-span-1 lg:shadow-gray-700  p-6 bg-white border border-white rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="mt-5">
+                        <div class="flex justify-center">
+                            <h1 class="font-bold text-3xl text-[gold] text-center">Enzim Xanthine Oxydase & (Vit
+                                B3)
+                            </h1>
+                        </div>
+                        <div>
+                            <p class="font-light text-2xl text-black text-center">Mengatasi Kanker atau Tumor &
+                                Efek
+                                Kemoterapi.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 10 11 12 -->
+                <div
+                    class="shadow-2xl md:col-span-1 lg:col-span-3 shadow-gray-700  p-6 bg-white border border-white rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="mt-5">
+                        <div class="flex justify-center">
+                            <h1 class="font-bold text-3xl text-[gold]"> Kalsium</h1>
+                        </div>
+                        <div>
+                            <p class="font-light text-2xl text-black text-center">Membantu pertumbuhan tulang &
+                                mencegah
+                                Osteoporosis. </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 13 -->
+                <div
+                    class="shadow-2xl md:col-span-1 lg:shadow-gray-700  p-6 bg-white border border-white rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="mt-5">
+                        <div class="flex justify-center">
+                            <h1 class="font-bold text-3xl text-[gold] text-center">MCT <br> (Medium Chain
+                                Trygliseride)
+                            </h1>
+                        </div>
+                        <div>
+                            <p class="font-light text-2xl text-black text-center">Berguna bagi program Dietary &
+                                penyembuhan stroke.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 14 -->
+                <div
+                    class="shadow-2xl md:col-span-1 lg:shadow-gray-700  p-6 bg-white border border-white rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="mt-16" id="max">
+                        <div class="flex justify-center">
+                            <h1 class="font-bold text-3xl text-[gold]">Lactoglobulin</h1>
+                        </div>
+                        <div>
+                            <p class="font-light text-2xl text-black text-center"> Penahan protein sebab alergi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 15 -->
+                <div
+                    class="shadow-2xl md:col-span-1 lg:shadow-gray-700  p-6 bg-white border border-white rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="lg:mt-13 md:mt-7 sm:mt-2 text-center">
+                        <div class="flex justify-center">
+                            <h1 class="font-bold text-3xl text-[gold]">Riboflavin (Vit B2) dan B3</h1>
+                        </div>
+                        <div>
+                            <p class="font-light text-2xl text-black text-center">Menumbuh-
+                                kembangkan sel otak bagi kecerdasan anak.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <h1 class="text-6xl text-center mt-40 font-medium" id="manfaat">Manfaat ProEtawa</h1>
+        <div class="flex justify-center">
+            <div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 md:mx-7 sm:mx-7  mt-11 gap-9" id="kand">
+
+                <div id="box"
+                    class="shadow-2xl shadow-gray-700   p-6 bg-[gold] border border-[gold] rounded-lg dark:bg-gray-800 dark:border-gray-700">
                     <div class="flex justify-center">
-                        <i class="fa-solid fa-award text-gray-500 text-3xl p-5 bg-gray-100 "
+                        <i class="fa-solid fa-check text-[gold] text-3xl p-5 bg-white " style="clip-path: polygon(50% 0%, 63% 30%, 98% 35%, 73% 63%, 79% 91%, 50% 77%, 21% 91%, 25% 60%, 2% 35%, 33% 31%);                        ;
+                            "></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-2xl font-medium text-center text-white dark:text-white"> Membantu
+                            meningkatkan daya tahan dan imunitas tubuh dari berbagai virus.</h5>
+                    </div>
+                </div>
+
+                <div id="box"
+                    class="shadow-2xl shadow-gray-700   p-6 bg-[gold] border border-[gold] rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-center">
+                        <i class="fa-solid fa-check text-[gold] text-3xl p-5 bg-white " style="clip-path: polygon(50% 0%, 63% 30%, 98% 35%, 73% 63%, 79% 91%, 50% 77%, 21% 91%, 25% 60%, 2% 35%, 33% 31%);                        ;
+                        "></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-2xl font-medium text-center text-white dark:text-white"> Membantu
+                            untuk
+                            penderita Diabetes dan menstabilkan Kolestrol.</h5>
+                    </div>
+                </div>
+
+
+                <div id="box"
+                    class="shadow-2xl shadow-gray-700   p-6 bg-[gold] border border-[gold] rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-center">
+                        <i class="fa-solid fa-check text-[gold] text-3xl p-5 bg-white " style="clip-path: polygon(50% 0%, 63% 30%, 98% 35%, 73% 63%, 79% 91%, 50% 77%, 21% 91%, 25% 60%, 2% 35%, 33% 31%);                        ;
+                    "></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-2xl font-medium text-center text-white dark:text-white"> Membantu
+                            untuk
+                            menstabilkan tekanan darah bagi penderita Hipertensi dan tekanan darah rendah.</h5>
+                    </div>
+                </div>
+
+
+                <div id="box"
+                    class="shadow-2xl shadow-gray-700 p-6 bg-[gold] border border-[gold] rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-center">
+                        <i class="fa-solid fa-check text-[gold] text-3xl p-5 bg-white " style="clip-path: polygon(50% 0%, 63% 30%, 98% 35%, 73% 63%, 79% 91%, 50% 77%, 21% 91%, 25% 60%, 2% 35%, 33% 31%);                        ;
+                "></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-2xl font-medium text-center text-white dark:text-white"> Membantu
+                            mengeluarkan toksin/racun dari dalam tubuh.</h5>
+                    </div>
+                </div>
+
+
+                <div id="box"
+                    class="shadow-2xl shadow-gray-700   p-6 bg-[gold] border border-[gold] rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-center">
+                        <i class="fa-solid fa-check text-[gold] text-3xl p-5 bg-white " style="clip-path: polygon(50% 0%, 63% 30%, 98% 35%, 73% 63%, 79% 91%, 50% 77%, 21% 91%, 25% 60%, 2% 35%, 33% 31%);                        ;
+            "></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-2xl font-medium text-center text-white dark:text-white">
+                            Membantu penderita saraf terjepit & gangguan saraf lain.
+                        </h5>
+                    </div>
+                </div>
+
+
+                <div id="box"
+                    class="shadow-2xl shadow-gray-700   p-6 bg-[gold] border border-[gold] rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-center">
+                        <i class="fa-solid fa-check text-[gold] text-3xl p-5 bg-white " style="clip-path: polygon(50% 0%, 63% 30%, 98% 35%, 73% 63%, 79% 91%, 50% 77%, 21% 91%, 25% 60%, 2% 35%, 33% 31%);                        ;
+        "></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-2xl font-medium text-center text-white dark:text-white"> Membantu
+                            melancarkan sistem pencernaan.</h5>
+                    </div>
+                </div>
+
+
+                <div id="box"
+                    class="shadow-2xl shadow-gray-700   p-6 bg-[gold] border border-[gold] rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-center">
+                        <i class="fa-solid fa-check text-[gold] text-3xl p-5 bg-white " style="clip-path: polygon(50% 0%, 63% 30%, 98% 35%, 73% 63%, 79% 91%, 50% 77%, 21% 91%, 25% 60%, 2% 35%, 33% 31%);                        ;
+        "></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-2xl font-medium text-center text-white dark:text-white">Membantu
+                            mencerdaskan Otak Anak.</h5>
+                    </div>
+                </div>
+
+
+                <div id="box"
+                    class="shadow-2xl shadow-gray-700   p-6 bg-[gold] border border-[gold] rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-center">
+                        <i class="fa-solid fa-check text-[gold] text-3xl p-5 bg-white " style="clip-path: polygon(50% 0%, 63% 30%, 98% 35%, 73% 63%, 79% 91%, 50% 77%, 21% 91%, 25% 60%, 2% 35%, 33% 31%);                        ;
+        "></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-2xl font-medium text-center text-white dark:text-white">Membantu
+                            pertumbuhan Tulang dan Gigi.</h5>
+                    </div>
+                </div>
+
+
+                <div id="box"
+                    class="shadow-2xl shadow-gray-700   p-6 bg-[gold] border border-[gold] rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-center">
+                        <i class="fa-solid fa-check text-[gold] text-3xl p-5 bg-white " style="clip-path: polygon(50% 0%, 63% 30%, 98% 35%, 73% 63%, 79% 91%, 50% 77%, 21% 91%, 25% 60%, 2% 35%, 33% 31%);                        ;
+        "></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-2xl font-medium text-center text-white dark:text-white">Baik
+                            dikonsumsi Ibu
+                            Hamil dan Menyusui.</h5>
+                    </div>
+                </div>
+
+
+                <div id="box"
+                    class="shadow-2xl shadow-gray-700   p-6 bg-[gold] border border-[gold] rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-center">
+                        <i class="fa-solid fa-check text-[gold] text-3xl p-5 bg-white " style="clip-path: polygon(50% 0%, 63% 30%, 98% 35%, 73% 63%, 79% 91%, 50% 77%, 21% 91%, 25% 60%, 2% 35%, 33% 31%);                        ;
+        "></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-2xl font-medium text-center text-white dark:text-white">Membantu
+                            meningkatkan Vitalitas.
+                        </h5>
+                    </div>
+                </div>
+
+
+                <div id="box"
+                    class="shadow-2xl shadow-gray-700   p-6 bg-[gold] border border-[gold] rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-center">
+                        <i class="fa-solid fa-check text-[gold] text-3xl p-5 bg-white " style="clip-path: polygon(50% 0%, 63% 30%, 98% 35%, 73% 63%, 79% 91%, 50% 77%, 21% 91%, 25% 60%, 2% 35%, 33% 31%);                        ;
+        "></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-2xl font-medium text-center text-white dark:text-white"> Sangat
+                            baik untuk
+                            Program Kehamilan.</h5>
+                    </div>
+                </div>
+
+
+                <div id="box"
+                    class="shadow-2xl shadow-gray-700   p-6 bg-[gold] border border-[gold] rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-center">
+                        <i class="fa-solid fa-check text-[gold] text-3xl p-5 bg-white " style="clip-path: polygon(50% 0%, 63% 30%, 98% 35%, 73% 63%, 79% 91%, 50% 77%, 21% 91%, 25% 60%, 2% 35%, 33% 31%);                        ;
+        "></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-2xl font-medium text-center text-white dark:text-white">Baik
+                            dikonsumsi
+                            penderita Maag.</h5>
+                    </div>
+                </div>
+
+
+                <div id="box"
+                    class="shadow-2xl shadow-gray-700   p-6 bg-[gold] border border-[gold] rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-center">
+                        <i class="fa-solid fa-check text-[gold] text-3xl p-5 bg-white " style="clip-path: polygon(50% 0%, 63% 30%, 98% 35%, 73% 63%, 79% 91%, 50% 77%, 21% 91%, 25% 60%, 2% 35%, 33% 31%);                        ;
+        "></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-2xl font-medium text-center text-white dark:text-white">Membantu
+                            penderita
+                            TBC, Asma, & Bronkhitis</h5>
+                    </div>
+                </div>
+
+
+                <div id="box"
+                    class="shadow-2xl shadow-gray-700   p-6 bg-[gold] border border-[gold] rounded-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex justify-center">
+                        <i class="fa-solid fa-check text-[gold] text-3xl p-5 bg-white " style="clip-path: polygon(50% 0%, 63% 30%, 98% 35%, 73% 63%, 79% 91%, 50% 77%, 21% 91%, 25% 60%, 2% 35%, 33% 31%);                        ;
+        "></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-2 text-2xl font-medium text-center text-white dark:text-white">Membantu
+                            penderita
+                            Asam Urat, Rematik , Stroke</h5>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <h1 class="text-6xl text-center mt-40 font-medium" id="kelebihan">Keunggulan ProEtawa</h1>
+
+        <div class="grid grid-cols-4 gap-8 px-10 mt-12 font-Poppins" id="provide">
+
+            <div
+                class="p-4 dark:shadow-lg dark:shadow-white rounded-lg shadow-2xl shadow-gray-700 sm:col-span-3 md:col-span-3 lg:col-span-2">
+                <div class="mt-5">
+                    <div class="flex justify-center">
+                        <i class="fa-solid fa-award text-gray-500 text-4xl p-5 bg-gray-100 "
                             style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);"></i>
                     </div>
                     <div>
-                        <h5 class="mb-2 text-2xl font-medium text-center text-gray-900 dark:text-white">Kualitas
-                            Susu Kambing <span id="p" class="text-yellow-300">PREMIUM</span>.</h5>
+                        <h5 class="mb-2 text-3xl font-medium text-center text-gray-900 dark:text-white">Kualitas
+                            susu kambing <span id="p" class="text-yellow-300">Premium</span>.</h5>
                     </div>
-                    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400"></p>
                 </div>
+            </div>
 
-                <div id="boxes"
-                    class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div
+                class="p-4 dark:shadow-lg dark:shadow-white rounded-lg shadow-2xl shadow-gray-700  sm:col-span-3 md:col-span-3 lg:col-span-1">
+                <div class="mt-5">
                     <div class="flex justify-center">
                         <i class="fa-solid fa-check text-gray-500 text-3xl p-5 bg-gray-100 "
                             style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);"></i>
                     </div>
                     <div>
-                        <h5 class="mb-2 text-2xl font-medium text-center text-gray-900 dark:text-white">Menggunakan
+                        <h5 class="mb-2 text-2xl font-medium text-center text-gray-900 dark:text-white">
+                            Menggunakan
                             Gula Aren <span id="p" class="text-yellow-300">Premium</span>.</h5>
                     </div>
-                    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400"></p>
                 </div>
+            </div>
 
-                <div id="boxes"
-                    class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <div class="flex justify-center">
-                        <i class="fa-solid fa-magnifying-glass text-gray-500 text-3xl p-5 bg-gray-100 "
-                            style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);"></i>
-                    </div>
-                    <div>
-                        <h5 class="mb-2 text-2xl font-medium text-center text-gray-900 dark:text-white">Dengan
-                            <span id="p" class="text-yellow-300">pengawasan</span> Ketat dari Hulu ke
-                            Hilir.</h5>
-                    </div>
-                    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400"></p>
+            <div
+                class=" p-4 rounded-lg shadow-2xl shadow-gray-700  sm:col-span-3 md:col-span-3 lg:col-span-1 dark:shadow-lg dark:shadow-white">
+                </p>
+                <div class="flex justify-center">
+                    <i class="fa-solid fa-magnifying-glass text-gray-500 text-3xl p-5 bg-gray-100 "
+                        style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);"></i>
                 </div>
+                <div>
+                    <h5 class="mb-2 text-2xl font-medium text-center text-gray-900 dark:text-white">Dengan
+                        <span id="p" class="text-yellow-300">pengawasan</span> Ketat dari Hulu ke
+                        Hilir.</h5>
+                </div>
+            </div>
 
-
-                <div id="boxes"
-                    class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div
+                class="p-4 rounded-lg shadow-2xl shadow-gray-700  sm:col-span-3 md:col-span-3 lg:col-span-1 dark:shadow-lg dark:shadow-white">
+                <div class="mt-5">
                     <div class="flex justify-center">
                         <i class="fa-solid fa-mask-face text-gray-500 text-3xl p-5 bg-gray-100 "
                             style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);"></i>
@@ -374,44 +1049,44 @@
                                 Standard
                                 ISO 22000</span></h5>
                     </div>
-                    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400"></p>
                 </div>
+            </div>
 
-
-                <div id="boxes"
-                    class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div
+                class="p-4 rounded-lg shadow-2xl shadow-gray-700 sm:col-span-3 md:col-span-3 lg:col-span-2 dark:shadow-lg dark:shadow-white">
+                <div class="mt-5">
                     <div class="flex justify-center">
                         <i class="fa-solid fa-flask-vial text-gray-500 text-3xl p-5 bg-gray-100 "
                             style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);"></i>
                     </div>
                     <div>
                         <h5 class="mb-2 text-2xl font-medium text-center text-gray-900 dark:text-white"> <span
-                                class="text-red-600">TIDAK</span> menggunakan Bahan Kimia dan pengawet dalam proses
+                                class="text-red-600">TIDAK</span> menggunakan Bahan Kimia dan pengawet dalam
+                            proses
                             pembuatannya.
                         </h5>
                     </div>
-                    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
-                    </p>
                 </div>
+            </div>
 
+            <div
+                class=" p-4 rounded-lg shadow-2xl shadow-gray-700  sm:col-span-3 md:col-span-3 lg:col-span-1 dark:shadow-lg dark:shadow-white">
 
-                <div id="boxes"
-                    class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <div class="flex justify-center">
-                        <i class="fa-solid fa-trophy text-gray-500 text-3xl p-5 bg-gray-100 "
-                            style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);"></i>
-                    </div>
-                    <div>
-                        <h5 class="mb-2 text-2xl font-medium text-center text-gray-900 dark:text-white">
-                            <span id="p" class="text-yellow-300">Satu-Satunya</span> Susu Kambing yang Memiliki
-                            <span id="p" class="text-yellow-300">Rasa Nikmat & Tidak Amis</span>.</h5>
-                    </div>
-                    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400"></p>
+                <div class="flex justify-center">
+                    <i class="fa-solid fa-trophy text-gray-500 text-3xl p-5 bg-gray-100 "
+                        style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);"></i>
+                </div>
+                <div>
+                    <h5 class="mb-2 text-2xl font-medium text-center text-gray-900 dark:text-white">
+                        <span id="p" class="text-yellow-300">Satu-Satunya</span> Susu Kambing yang Memiliki
+                        <span id="p" class="text-yellow-300">Rasa Nikmat & Tidak Amis</span>.</h5>
                 </div>
             </div>
         </div>
 
-        <h1 class="text-6xl text-center mt-64 font-medium" id="lisence">Lisensi</h1>
+
+
+        <h1 class="text-6xl text-center mt-40 font-medium" id="lisence">Lisensi</h1>
         <div class="flex justify-center">
             <marquee width="100%" behavior="scroll" scrollamount="10" direction="left">
                 <div class="my-10 flex">
@@ -552,45 +1227,269 @@
         </div> -->
 
         <!-- testimoni -->
-        <h1 class="text-6xl text-center mt-72 font-medium mb-10" id="test">Apa kata mereka?</h1>
+        <h1 class="text-6xl text-center mt-28 font-medium mb-10" id="test">Apa kata mereka?</h1>
         <div class="slide">
             <main>
-                <ul class='slider'>
-                    <li class='item'>
-                        <div class='testimonial'>
-                            <p>"Semenjak konsumsi Susu Kambing ProEtawa, Kolestrol dan Diabetes saya menjadi turun dan
-                                suatu ikhtiar segala keluhan."</p>
-                            <p>Bambang (50 Tahun)</p>
-                            <p>Penderita KOLESTROL & DIABETES</p>
-                        </div>
-                        <img class='image' src='https://source.unsplash.com/IF9TK5Uy-KI'>
-                    </li>
-                    <li class='item'>
-                        <div class='testimonial'>
-                            <p>"Susu Kambing ProEtawa membuat gula darah saya cepat turun & badan segar kembali."</p>
-                            <p>Ahmad Qasim, S.Pd.I., M.Pd.I., (45 Tahun)</p>
-                            <p>Pengidap DIABETES</p>
-                        </div>
-                        <img class='image' src='https://source.unsplash.com/C5XyLljkMrY'>
-                    </li>
-                    <li class='item'>
-                        <div class='testimonial'>
-                            <p>"Rasanya enak, segar, dan bervitamin. Dan setelah mengkonsumsinya Kolestrol saya mulai
-                                turun."</p>
-                            <p>dr. H. Ahmad Rzal, MA (64 Tahun)</p>
-                            <p>Pengidap KOLESTROL</p>
-                        </div>
-                        <img class='image' src='https://source.unsplash.com/e12wQLAjQi0'>
-                    </li>
-                </ul>
+                <div class="bg">
+                    <ul class='slider'>
+                        <li class='item'>
+                            <div class='testimonial'>
+                                <p>"Semenjak mengkonsumsi Susu Kambing ProEtawa, pernafasan saya yang dulu biasanya
+                                    sesak
+                                    sekarang berangsur-angsur membaik dan normal kembali."</p>
+                                <p>Bambang (50 Tahun)</p>
+                                <p>SESAK NAFAS</p>
+                            </div>
+                            <img class='image' src='img/WhatsApp Image 2024-04-15 at 11.16.47.jpeg'>
+                        </li>
+                        <li class='item'>
+                            <div class='testimonial'>
+                                <p>"Rasanya enak, seger, dan gak
+                                    bau amis. Keluhan saya yaitu, mudah lelah namun setelah mengkonsumsi ProEtawa badan
+                                    saya
+                                    menjadi bugar, fit & segar."</p>
+                                <p>Rika 28th</p>
+                                <p>5L (LEMAH, LETIH, LESU & LELAH) </p>
+                            </div>
+                            <img class='image' src='img/WhatsApp Image 2024-04-15 at 11.10.44.jpeg'>
+                        </li>
+                        <li class='item'>
+                            <div class='testimonial'>
+                                <p>"Pada awalnya, saya mengalami keluhan rasa sakit dan tidak nyaman di daerah pinggang
+                                    &
+                                    tulang saya. Namun setelah mengkonsumsi Susu Kambing Proetawa, sakit pinggang &
+                                    nyeri
+                                    tulang saya hilang dan jauh lebih baik Susu Kambing Proetawa benar-benar
+                                    menakjubkan!"
+                                </p>
+                                <p>Eci Ariyani 35th</p>
+                                <p>SAKIT PINGGANG & NYERI TULANG</p>
+                            </div>
+                            <img class='image' src='img/WhatsApp Image 2024-04-15 at 11.02.15.jpeg'>
+                        </li>
+                        <li class='item'>
+                            <div class='testimonial'>
+                                <p>"Sejak konsumsi Susu Kambing ProEtawa Kolesterol saya turun dari 230 hingga 180. Ini
+                                    sangat berguna
+                                    dan rasanya sangat enak!"
+                                </p>
+                                <p>Bapak Joppo 45th</p>
+                                <p>KOLESTROL</p>
+                            </div>
+                            <img class='image' src='img/WhatsApp Image 2024-04-16 at 10.44.15.jpeg'>
+                        </li>
+                        <li class='item'>
+                            <div class='testimonial'>
+                                <p>"Semenjak minum ProEtawa tidak
+                                    mudah sakit, lebih aktif, lebih cerdas,
+                                    dan daya tangkap lebih cepat.
+                                    Masyaallah Tabarakallah"</p>
+                                <p>AL-FATIH ARRASY WIJAYA 5th</p>
+                            </div>
+                            <img class='image' src='img/WhatsApp Image 2024-04-15 at 10.35.34.jpeg'>
+                        </li>
+                        <li class='item'>
+                            <div class='testimonial'>
+                                <p>"Saya menderita penyakit Ginjal dalam 1 tahun ini. Alhamdulillah semenjak saya
+                                    mengkonsumsi ProEtawa ini alhamduliah ginjal saya hasil lab terakhir sudah bagus.
+                                    Terimakasih
+                                    ProEtawa!"</p>
+                                <p>Iwan Setiawan 40th</p>
+                                <p>GINJAL</p>
+                            </div>
+                            <img class='image' src='img/WhatsApp Image 2024-04-15 at 14.07.53.jpeg'>
+                        </li>
+                        <li class='item'>
+                            <div class='testimonial'>
+                                <p>"Keluhan lemah syaraf & sakit sendi di bagian tangan sebelah kanan karena bekas
+                                    kecelakaan. Sejak minum ProEtawa 1 tahun perlahan tangan sebelah kanan sudah ada
+                                    tenaga,
+                                    nyeri sendi berkurang dan tubuh semakin fit."</p>
+                                <p>Pak Suwandi 55th</p>
+                                <p>LEMAH SYARAF & SAKIT SENDI
+                                </p>
+                            </div>
+                            <img class='image' src='img/WhatsApp Image 2024-04-15 at 11.26.37.jpeg'>
+                        </li>
+                        <li class='item'>
+                            <div class='testimonial'>
+                                <p style="font-size: 13px;">"Alhamdulillah semenjak mengkonsumsi Susu Kambing ProEtawa
+                                    sudah banyak perubahan. Dari Batuk Asma sudah mendingan sudah enakan. Terus Batuk
+                                    Pilek juga sudah sembuh. Terima kasih ProEtawa!"</p>
+                                <p>Mirna 32th</p>
+                                <p>BATUK ASMA & PILEK
+                                </p>
+                            </div>
+                            <img class='image' src='img/WhatsApp Image 2024-04-15 at 12.52.26.jpeg'>
+                        </li>
+                        <li class='item'>
+                            <div class='testimonial'>
+                                <p style="font-size: 13px;">"Saya menderita Stroke Ringan. Semenjak rutin minum ProEtawa
+                                    selama 1 tahun lebih, badan terasa enteng dan sehat, tensi darah dan kadar gula
+                                    darahnya
+                                    juga normal. Gejala tanda-tanda Stroke Ringan perlahan berkurang munculnya."</p>
+                                <p>Ibu Sudini 70th</p>
+                                <p>STROKE RINGAN
+                                </p>
+                            </div>
+                            <img class='image' src='img/WhatsApp Image 2024-04-15 at 11.06.15.jpeg'>
+                        </li>
+                        <li class='item'>
+                            <div class='testimonial'>
+                                <p style="font-size: 13px;">"Dulu Tengkuk Kepala bagian belakang sering sakit dan
+                                    setelah
+                                    diperiksa, saya menderita Asam Urat. setelah mengkonsumsi ProEtawa secara rutin ada
+                                    perubahan, kepala mulai rileks dan pegal-pegal di tangan dan kaki mulai berkurang."
+                                </p>
+                                <p>Rusman Nur Hakim 43th</p>
+                                <p>ASAM URAT
+                                </p>
+                            </div>
+                            <img class='image' src='img/WhatsApp Image 2024-04-15 at 11.01.54.jpeg'>
+                        </li>
+                        <li class='item'>
+                            <div class='testimonial'>
+                                <p style="font-size: 13px;">"Saya penderita saraf terjepit sudah puluhan tahun dan nyeri
+                                    lutut. Saya sudah berobat dan menghabiskan puluhan juta untuk disuntik dan obat2an
+                                    tapi tidak juga sembuh.
+                                    Alhamdulillah sy konsumsi rutin ProEtawa 2x sehari syaraf terjepit dan nyeri lutut
+                                    hilang dan saya tidak perlu pakai tongkat lagi."
+                                </p>
+                                <p>Emi Nuryani, 65 Thn.</p>
+                                <p>SARAF TERJEPIT & NYERI SENDI
+                                </p>
+                            </div>
+                            <img class='image' src='img/WhatsApp Image 2024-04-16 at 10.43.33.jpeg'>
+                        </li>
+                        <li class='item'>
+                            <div class='testimonial'>
+                                <p>"Sejak meminum Susu Kambing ProEtawa, Saya jadi berhenti
+                                    Suntik Insulin. Diabetes & Kolesterol saya stabil."
+                                </p>
+                                <p>BAPAK LEJAM 69th
+                                </p>
+                                <p>Diabetes & Kolestrol</p>
+                            </div>
+                            <img class='image' src='img/WhatsApp Image 2024-04-15 at 10.51.04.jpeg'>
+                        </li>
+                    </ul>
+                </div>
                 <nav>
                     <button class='btn' data-index='0'></button>
                     <button class='btn' data-index='1'></button>
                     <button class='btn' data-index='2'></button>
+                    <button class='btn' data-index='3'></button>
+                    <button class='btn' data-index='4'></button>
+                    <button class='btn' data-index='5'></button>
+                    <button class='btn' data-index='6'></button>
+                    <button class='btn' data-index='7'></button>
+                    <button class='btn' data-index='8'></button>
+                    <button class='btn' data-index='9'></button>
+                    <button class='btn' data-index='10'></button>
+                    <button class='btn' data-index='11'></button>
                 </nav>
             </main>
         </div>
 
+        <h1 id="kand"
+            class="text-3xl text-center mt-20 font-medium mb-10 bg-green-500 lg:w-fit lg:mx-auto md:mx-10 p-5 sm:text-2xl sm:mx-8 text-white rounded-lg">
+            Ribuan orang telah <br> merasakan manfaat ProEtawa, kini giliran anda!</h1>
+        <div class="flex justify-center">
+            <div id="hit"
+                class="counting mt-48 bg-gradient-to-r from-green-900 via-green-500 to-green-300 w-fit p-5 rounded-xl md:mx-10">
+                <div class="lg:flex lg:flex-row md:flex-row md:flex sm:flex-col gap-28 text-white p-10 lg:space-y-0 md:space-y-0 sm:space-y-16"
+                    id="count">
+                    <div class="count flex flex-col text-center">
+                        <i class="fa-solid fa-truck-fast text-4xl"></i>
+                        <span class="num font-bold text-3xl" data-val="200000">000</span>
+                        <span class="text text-2xl font-light">Telah terjual</span>
+                    </div>
+
+                    <div class="count flex flex-col text-center">
+                        <i class="fa-solid fa-paper-plane text-4xl"></i>
+                        <span class="text text-2xl font-light">Tersebar di</span>
+                        <span class="num font-bold text-3xl" data-val="65">000</span>
+                        <span class="text text-2xl font-light">kota</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="grid lg:grid-cols-4 md:mx-10 sm:mx-5 md:grid-cols-2 gap-4 mt-52 mx-36" id="gale">
+            <div class="grid gap-4">
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="img2/WhatsApp Image 2024-04-16 at 11.15.15.jpeg" alt="">
+                </div>
+                <div>
+                    <img class=" max-w-full h-full rounded-lg"
+                        src="img2/WhatsApp Image 2024-04-16 at 11.35.54 (1).jpeg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="img2/WhatsApp Image 2024-04-16 at 11.35.54.jpeg" alt="">
+                </div>
+            </div>
+            <div class="grid gap-4">
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="img2/WhatsApp Image 2024-04-16 at 11.42.42.jpeg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="img2/WhatsApp Image 2024-04-16 at 11.25.31.jpeg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="img2/WhatsApp Image 2024-04-16 at 11.35.52 (1).jpeg" alt="">
+                </div>
+            </div>
+            <div class="grid gap-4">
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="img2/WhatsApp Image 2024-04-16 at 11.26.09.jpeg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="img2/WhatsApp Image 2024-04-16 at 11.35.52.jpeg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="img2/WhatsApp Image 2024-04-16 at 11.35.53.jpeg" alt="">
+                </div>
+            </div>
+            <div class="grid gap-4">
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="img2/WhatsApp Image 2024-04-16 at 11.23.09.jpeg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="img2/WhatsApp Image 2024-04-16 at 11.38.39.jpeg" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg"
+                        src="img2/WhatsApp Image 2024-04-16 at 11.25.09.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <h3 id="bat"
+            class="lg:text-6xl md:text-4xl sm:text-3xl text-center my-52 hover:bg-green-400 duration-150 font-medium mb-10 bg-green-500 w-fit mx-auto p-3 text-white rounded-full">
+            <a href="#amba">Ya, saya mau order ProEtawa!</a></h3>
+
+        <!-- slogan -->
+        <div class="grid grid-cols-1 my-44 max-w-xl mx-auto" id="kand-1">
+            <div
+                class="py-8 rounded-lg shadow-2xl shadow-gray-700 bg-gradient-to-r from-green-900 to-green-300 font-Poppins dark:shadow-lg dark:shadow-white">
+                <blockquote class="text-3xl text-center font-bold text-white dark:text-white">
+                    "PROETAWA!"
+                    <br>
+                    <span class="font-medium">"Proaktif sampai tua!"</span>
+                </blockquote>
+            </div>
+        </div>
 
         <!-- footer -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -599,7 +1498,7 @@
             </path>
         </svg>
         <footer class="bg-[#6AA121] -mt-1">
-            <div class="w-full p-4 md:py-8">
+            <div class="w-full p-4 md: py-2">
                 <div class="sm:flex sm:flex-col md:flex-col sm:items-center" id="foot">
                     <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                         <img src="img/LOGO PROETAWA.png" alt="Flowbite Logo" width="300px" />
@@ -625,6 +1524,7 @@
                         class="hover:underline">ProEtawa Official Website</span>. All Rights Reserved.</p>
             </div>
         </footer>
+
 
 
         <script src="https://kit.fontawesome.com/e81773e2de.js" crossorigin="anonymous"></script>

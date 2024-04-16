@@ -38,3 +38,30 @@ const init = () => animate(0);
 
 window.addEventListener('load', init, false);
 window.addEventListener('click', activate, false);
+
+// counting
+let valueDisplays = document.querySelectorAll(".num");
+let interval = 1;
+
+valueDisplays.forEach((valueDisplay) => {
+    let startValue = 0;
+    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+    let duration = Math.floor(interval / endValue); // Adjusted duration calculation
+    let counter = setInterval(function(){
+        startValue +=1;
+        valueDisplay.textContent = startValue;
+        if(startValue == endValue){
+            clearInterval(counter);
+        }
+    }, duration > 0 ? duration : 1);
+});
+
+
+const menuBar = document.querySelector(".menu-bar");
+const menuNav = document.querySelector(".menu");
+
+menuBar.addEventListener("click", () => {
+    menuNav.classList.toggle("menu-active");
+});
+
+
